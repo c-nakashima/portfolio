@@ -103,6 +103,8 @@ main .container .message .job.-ja {
 
 .about {
   margin-top: -130px;
+  position: relative;
+  left: 1000px;
 }
 
 .about h2 {
@@ -215,6 +217,8 @@ main .container .message .job.-ja {
 }
 
 .works {
+  position: relative;
+  right: 1000px;
   width: 100%;
   margin-top: 140px;
 }
@@ -298,8 +302,10 @@ main .container .message .job.-ja {
 }
 
 .contact {
+  margin-top: 130px;
+  position: relative;
+  left: 1000px;
   width: 100%;
-  margin-top: 140px;
 }
 
 .contact h2 {
