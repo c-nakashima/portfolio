@@ -13,9 +13,9 @@
       <h1>Chisato Nakashima</h1>
       <nav>
         <ul>
-          <li>About</li>
-          <li>Works</li>
-          <li>Contact</li>
+          <li id="aboutBtn" class="scroll-btn">About</li>
+          <li id="worksBtn" class="scroll-btn">Works</li>
+          <li id="contactBtn" class="scroll-btn">Contact</li>
         </ul>
       </nav>
     </div>
@@ -29,7 +29,7 @@
       </div>
     </div>
   </main>
-  <section class="about">
+  <section id="about" class="about">
     <h2 class="inview fadeIn">About</h2>
     <div class="container">
       <p class="description -about">フロントエンドエンジニア/webデザイナーとして、Web制作をおこなっています。ほか、Webコンテンツ執筆・編集や、イラスト制作の経験もあります。</p>
@@ -88,7 +88,7 @@
       </div>
     </div>
   </section>
-  <section class="works">
+  <section id="works" class="works">
     <h2 class="inview fadeIn">Works</h2>
     <div class="container">
       <div class="work">
@@ -129,23 +129,23 @@
       </div>
     </div>
   </section>
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2 class="inview fadeIn">Contact</h2>
     <div class="container">
       <p class="description -contact">お問い合わせは以下よりお願いいたします。</p>
       <div class="contact-info">
         <p>chisato_contact@gmail.com</p>
         <ul>
-          <li>GitHub</li>
+          <li><a href="https://github.com/c-nakashima" target="_blank" alt="GitHub">GitHub</a></li>
           <li>/</li>
-          <li>Wantedly</li>
+          <li><a href="https://www.wantedly.com/id/chisato_nakashima_b" target="_blank" alt="Wantedly">Wantedly</a></li>
           <li>/</li>
-          <li>Instagram</li>
+          <li><a href="https://www.instagram.com/part_ton_girl/" target="_blank" alt="Instagram">Instagram</a></li>
         </ul>
       </div>
     </div>
   </section>
-  <footer><img src="assets/footer-arrow.png" alt=""></footer>
+  <footer><img src="assets/footer-arrow.png" id="arrowBtn" class="scroll-btn"></footer>
   <script src="anime-master/lib/anime.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>

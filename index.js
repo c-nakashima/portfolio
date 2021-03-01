@@ -1,6 +1,4 @@
-// import anime from 'anime.min.js';
-// const anime = require('animejs');
-
+//slidein
 anime({
   targets: '.about',
   translateX: -1000,
@@ -22,7 +20,7 @@ anime({
   easing: 'easeOutQuart',
 });
 
-
+//fade in
 $(function(){
   $(".service").on("inview", function (event, isInView) {
     if (isInView) {
@@ -61,4 +59,29 @@ $(function(){
       $(this).stop().addClass("is-show");
     }
   });
+});
+
+//move to target position
+$(function(){
+$('.scroll-btn').click(function() {
+let scrollBtn= $(this).attr("id");
+let target;
+switch (scrollBtn){
+  case 'aboutBtn':
+    target = $('#about');
+    break;
+  case 'worksBtn':
+    target = $('#works');
+    break;
+  case 'contactBtn':
+    target = $('#contact');
+    break;
+  case 'arrowBtn':
+    target = $('html');
+    break;
+}
+let position = target.offset().top;
+$('body,html').animate({scrollTop:position}, 800, 'swing');
+return false;
+});
 });

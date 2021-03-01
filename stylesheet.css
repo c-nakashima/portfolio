@@ -9,6 +9,10 @@
   font-size: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 h2 {
   font-family: 'Playfair Display',serif;
   font-size: 70px;
@@ -368,6 +372,10 @@ footer {
 footer img {
   width: 44px;
   height: 57px;
+}
+
+footer img:hover {
+  cursor: pointer;
 }
 
 .fadeIn {
