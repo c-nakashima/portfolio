@@ -5,10 +5,53 @@ $COLOR_BLACK: #707070
 $COLOR_LIGHTGREY: #eee//#FAFAFA
 $BORDER: 0.5px solid $COLOR_BLACK
 
+// reset css
+// http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)//
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	vertical-align: baseline
+
+// HTML5 display-role reset for older browsers //
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+	display: block
+
+body
+	line-height: 1
+
+ol, ul
+	list-style: none
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
 *
-  list-style: none
   box-sizing: border-box
-  margin: 0
   color: $COLOR_BLACK
   font-family: 'Montserrat','YuGothic',san-serif
   font-size: 20px
@@ -16,11 +59,15 @@ $BORDER: 0.5px solid $COLOR_BLACK
 a
   text-decoration: none
 
-h2
+@mixin h2
   font-family: 'Playfair Display',serif
   font-size: 70px
   font-weight: 200
   margin: 0
+  margin-left: 10%
+  position: relative
+  top: 30px
+  left: 8%
 
 body
   max-width: 1004px
@@ -77,11 +124,14 @@ main
         font-size: 40px
         font-weight: 200
       .job
+        width: 300px
         &.-en
+          margin-top: 10px
+          padding-left: 5px
           font-size: 12px
           font-weight: 100
-          padding-left: 5px
         &.-ja
+          margin-top: 6px
           font-size: 14px
           font-weight: 300
           padding: 2px 0px 0px 5px
@@ -91,10 +141,7 @@ main
   position: relative
   left: 1000px
   h2
-    margin-left: 10%
-    position: relative
-    top: 30px
-    left: 8%
+    @include h2
   .container
     width: 100%
     border-top: $BORDER
@@ -106,6 +153,7 @@ main
       margin: 0
       font-size: 20px
       font-family: 'YuGothic'
+      line-height: 24px
     .services
       margin-top: 70px
       .service
@@ -131,7 +179,7 @@ main
         hr
           width: 310px
           position: relative
-          left: -60px
+          left: -150px
           border-bottom: $COLOR_BLACK
         .service-contents
           display: flex
@@ -147,14 +195,10 @@ main
             dt
               width: calc(100% - 6em)
               font-size: 12px
-              padding-bottom: 12px
-              &:nth-of-type(3)
-                padding-bottom: 0px
+              line-height: 24px
             dd
               font-size: 12px
-              padding-bottom: 12px
-              &:nth-of-type(3)
-                padding-bottom: 0px
+              line-height: 24px
               &::before
                 content: "~"
                 padding-right: .5em
@@ -165,6 +209,7 @@ main
             width: 55%
             margin-top: 30px
             font-size: 12px
+            line-height: 24px
 
 .works
   position: relative
@@ -172,10 +217,7 @@ main
   width: 100%
   margin-top: 140px
   h2
-    margin-left: 10%
-    position: relative
-    top: 30px
-    left: 8%
+    @include h2
   .container
     width: 100%
     border-top: $BORDER
@@ -234,10 +276,7 @@ main
   left: 1000px
   width: 100%
   h2
-    margin-left: 10%
-    position: relative
-    top: 30px
-    left: 8%
+    @include h2
   .container
     width: 100%
     border-top: $BORDER

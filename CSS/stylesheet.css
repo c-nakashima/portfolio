@@ -1,9 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
-* {
-  list-style: none;
-  box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
   color: #707070;
   font-family: 'Montserrat','YuGothic',san-serif;
   font-size: 20px;
@@ -11,13 +57,6 @@
 
 a {
   text-decoration: none;
-}
-
-h2 {
-  font-family: 'Playfair Display',serif;
-  font-size: 70px;
-  font-weight: 200;
-  margin: 0;
 }
 
 body {
@@ -97,13 +136,19 @@ main .container .message .name {
   font-weight: 200;
 }
 
+main .container .message .job {
+  width: 300px;
+}
+
 main .container .message .job.-en {
+  margin-top: 10px;
+  padding-left: 5px;
   font-size: 12px;
   font-weight: 100;
-  padding-left: 5px;
 }
 
 main .container .message .job.-ja {
+  margin-top: 6px;
   font-size: 14px;
   font-weight: 300;
   padding: 2px 0px 0px 5px;
@@ -116,6 +161,10 @@ main .container .message .job.-ja {
 }
 
 .about h2 {
+  font-family: 'Playfair Display',serif;
+  font-size: 70px;
+  font-weight: 200;
+  margin: 0;
   margin-left: 10%;
   position: relative;
   top: 30px;
@@ -135,6 +184,7 @@ main .container .message .job.-ja {
   margin: 0;
   font-size: 20px;
   font-family: 'YuGothic';
+  line-height: 24px;
 }
 
 .about .container .services {
@@ -171,7 +221,7 @@ main .container .message .job.-ja {
 .about .container .services .service hr {
   width: 310px;
   position: relative;
-  left: -60px;
+  left: -150px;
   border-bottom: #707070;
 }
 
@@ -192,20 +242,12 @@ main .container .message .job.-ja {
 .about .container .services .service .service-contents dl dt {
   width: calc(100% - 6em);
   font-size: 12px;
-  padding-bottom: 12px;
-}
-
-.about .container .services .service .service-contents dl dt:nth-of-type(3) {
-  padding-bottom: 0px;
+  line-height: 24px;
 }
 
 .about .container .services .service .service-contents dl dd {
   font-size: 12px;
-  padding-bottom: 12px;
-}
-
-.about .container .services .service .service-contents dl dd:nth-of-type(3) {
-  padding-bottom: 0px;
+  line-height: 24px;
 }
 
 .about .container .services .service .service-contents dl dd::before {
@@ -222,6 +264,7 @@ main .container .message .job.-ja {
   width: 55%;
   margin-top: 30px;
   font-size: 12px;
+  line-height: 24px;
 }
 
 .works {
@@ -232,6 +275,10 @@ main .container .message .job.-ja {
 }
 
 .works h2 {
+  font-family: 'Playfair Display',serif;
+  font-size: 70px;
+  font-weight: 200;
+  margin: 0;
   margin-left: 10%;
   position: relative;
   top: 30px;
@@ -317,6 +364,10 @@ main .container .message .job.-ja {
 }
 
 .contact h2 {
+  font-family: 'Playfair Display',serif;
+  font-size: 70px;
+  font-weight: 200;
+  margin: 0;
   margin-left: 10%;
   position: relative;
   top: 30px;
