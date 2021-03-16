@@ -1,10 +1,33 @@
-//slidein
-anime({
-  targets: '.about',
-  translateX: -1000,
-  duration: 2000,
-  easing: 'easeOutQuart',
+document.addEventListener('DOMContentLoaded', function(){
+  let trigger = new ScrollTrigger.default();
+  trigger.add('.about', {
+    toggle: {
+      callback: {
+        in: () => {
+          text_conv();
+          // anime.jsのコード
+          anime({
+            targets: '.about',
+            translateX: -1000,
+            duration: 2000,
+            easing: 'easeOutQuart',
+          });
+          // anime.js ここまで
+        },
+        out: () => {
+        }
+      }
+    }
+  });
 });
+
+//slidein
+// anime({
+//   targets: '.about',
+//   translateX: -1000,
+//   duration: 2000,
+//   easing: 'easeOutQuart',
+// });
 
 anime({
   targets: '.works',
@@ -85,3 +108,4 @@ $('body,html').animate({scrollTop:position}, 800, 'swing');
 return false;
 });
 });
+
