@@ -63,10 +63,10 @@ a
   font-family: 'Playfair Display',serif
   font-size: 70px
   font-weight: 200
-  margin: 0
-  // margin-left: 10%
-  margin-bottom: -30px
-  position: relative
+  // margin: 0
+  // // margin-left: 10%
+  // margin-bottom: -30px
+  // position: relative
 
 // body
 //   max-width: 1004px
@@ -140,25 +140,18 @@ main
           padding: 2px 0px 0px 5px
 
 .about
-  h2
-    // @include h2
-    font-family: 'Playfair Display',serif
-    font-size: 70px
-    font-weight: 200
-    position: relative
-    display: flex
-    justify-content: left
-    width: 100%
-    max-width: 1004px
-    // padding: 0 10%
-    // margin-bottom: -30px
-    margin: 0 10% -30px 10%
+  width: 100%
+  max-width: 1004px
+  margin: 0 auto;
+  .heading-top
+    h2
+      @include h2
+      margin: 0 10% -30px 10%
   .container
-    width: 100%
+    padding: 8% 10% 14% 10%
     border-top: $BORDER
     border-left: $BORDER
     border-bottom: $BORDER
-    padding: 8% 10% 14% 10%
     .description
       max-width: 1004px
       margin: 0 auto
