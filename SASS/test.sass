@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap')
+
+$COLOR_BLACK: #707070
+$COLOR_LIGHTGREY: #eee//#FAFAFA
+$BORDER: 0.5px solid $COLOR_BLACK
+
+// reset css
+// http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)//
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  vertical-align: baseline
+
+// HTML5 display-role reset for older browsers //
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+*
+  box-sizing: border-box
+  color: $COLOR_BLACK
+  font-family: 'Montserrat','YuGothic',san-serif
+  font-size: 20px
+
+a
+  text-decoration: none
+
+@mixin h2
+  font-family: 'Playfair Display',serif
+  font-size: 70px
+  font-weight: 200
+  margin: 0
+  // margin-left: 10%
+  margin-bottom: -30px
+  position: relative
+
+// body
+//   max-width: 1004px
+//   margin: 0 auto
+
+header
+  width: 100%
+  height: 60px
+  position: fixed
+  background-color: #ffffff
+  z-index: 10
+  opacity: 0.8
+  // padding: 0 5%
+  >.container
+    width: 90%
+    max-width: 1004px
+    height: 60px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    h1
+      font-size: 20px
+      font-weight: 100
+    nav
+      ul
+        display: flex
+        li
+          margin: 0px 10px
+          font-size: 20px
+          font-weight: 100
+          &:nth-of-type(3)
+            margin: 0px 0px 0px 10px
+          &:hover
+            border-bottom: $BORDER
+
+main
+  // width: 100%
+  max-width: 1004px
+  height: 580px
+  margin: 0 auto
+  background: url("../img/eye-catch.png") 100%
+  background-size: contain
+  background-repeat: no-repeat
+  .container
+    // width: 100%
+    max-width: 1004px
+    margin: 0 auto
+    position: absolute
+    .message
+      position: relative
+      left: 86px
+      top: 150px
+      p
+        margin: 0
+      .name
+        font-family: 'Playfair Display',serif
+        font-size: 40px
+        font-weight: 200
+      .job
+        width: 300px
+        &.-en
+          margin-top: 10px
+          padding-left: 5px
+          font-size: 12px
+          font-weight: 100
+        &.-ja
+          margin-top: 6px
+          font-size: 14px
+          font-weight: 300
+          padding: 2px 0px 0px 5px
+
+.about
+  h2
+    // @include h2
+    font-family: 'Playfair Display',serif
+    font-size: 70px
+    font-weight: 200
+    position: relative
+    display: flex
+    justify-content: left
+    width: 100%
+    max-width: 1004px
+    // padding: 0 10%
+    // margin-bottom: -30px
+    margin: 0 10% -30px 10%
+  .container
+    width: 100%
+    border-top: $BORDER
+    border-left: $BORDER
+    border-bottom: $BORDER
+    padding: 8% 10% 14% 10%
+    .description
+      max-width: 1004px
+      margin: 0 auto
+      font-size: 18px
+      font-family: 'YuGothic'
+      line-height: 28px
+    .services
+      margin-top: 70px
+      .service
+        width: 100%
+        max-width: 1004px
+        margin: 0 auto
+        padding: 40px 50px
+        background-color: $COLOR_LIGHTGREY
+        margin-bottom: 50px
+        &:nth-of-type(3)
+          margin-bottom: 0px
+        h3
+          margin-bottom: 10px
+          font-size: 26px
+          font-family: 'YuGothic'
+          font-weight: lighter
+          span
+            display: block
+            font-size: 12px
+            position: relative
+            // bottom: -5px
+            left: 2px
+        .service-contents
+          display: flex
+          font-size: 12px
+          dl
+            display: flex
+            // flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-between
+            width: 50%
+            padding: 10px 30px 30px 30px
+            background-color: #eee
+            dt
+              width: calc(100% - 6em)
+              font-size: 12px
+              line-height: 24px
+            dd
+              font-size: 12px
+              line-height: 24px
+              &::before
+                content: "~"
+                padding-right: .5em
+              &::after
+                content: "year"
+                padding-left: .5em
+          .service-description
+            width: 50%
+            margin-top: 10px
+            font-size: 12px
+            line-height: 24px
+
+// .works
+//   margin-top: 140px
+//   h2
+//     @include h2
+//   .container
+//     width: 100%
+//     border-top: $BORDER
+//     border-right: $BORDER
+//     border-bottom: $BORDER
+//     margin-right: 10%
+//     padding: 14% 6% 14% 0%
+//     .work
+//       width: 830px
+//       height: 450px
+//       position: relative
+//       margin: 0 auto 160px auto
+//       &:nth-of-type(3)
+//         margin-bottom: 0
+//       .work-img
+//         width: 580px
+//         height: 400px
+//         position: absolute
+//         background-color: $COLOR_LIGHTGREY
+//         top: 0
+//       &:nth-of-type(odd)
+//         .work-img
+//           background-color: pink
+//           left: 0
+//       &:nth-of-type(even)
+//         .work-img
+//           right: 0
+//       .work-description
+//         width: 410px
+//         height: 330px
+//         position: absolute
+//         border: $BORDER
+//         z-index: 1
+//         bottom: 0
+//         background-color: #FFFFFF
+//         ul
+//           padding: 60px 70px
+//           font-family: 'Montserrat',sans-serif
+//           font-weight: 300
+//           li
+//             margin-bottom: 30px
+//             span
+//               display: block
+//               width: 100%
+//               font-size: 10px
+//       &:nth-of-type(odd)
+//         .work-description
+//           right: 0
+//       &:nth-of-type(even)
+//         .work-description
+//           left: 0
