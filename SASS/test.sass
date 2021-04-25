@@ -3,7 +3,8 @@
 
 $COLOR_BLACK: #707070
 $COLOR_LIGHTGREY: #eee//#FAFAFA
-$BORDER: 0.5px solid $COLOR_BLACK
+$BORDER: 0.1px solid #CCC
+// $BORDER: 0.5px solid $COLOR_BLACK
 
 // reset css
 // http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)//
@@ -67,10 +68,6 @@ a
   // // margin-left: 10%
   // margin-bottom: -30px
   // position: relative
-
-// body
-//   max-width: 1004px
-//   margin: 0 auto
 
 header
   width: 100%
@@ -224,7 +221,7 @@ main
     border-right: $BORDER
     border-bottom: $BORDER
     .work
-      width: 830px
+      width: 800px
       height: 450px
       position: relative
       margin: 0 auto 160px auto
@@ -247,7 +244,8 @@ main
         width: 410px
         height: 330px
         position: absolute
-        border: $BORDER
+        border: 0.1px solid #FFF
+        box-shadow: 1px 2px 20px rgba(9,9,9,.02)
         z-index: 1
         bottom: 0
         background-color: #FFFFFF
@@ -316,3 +314,35 @@ footer
     height: 57px
     &:hover
       cursor: pointer
+
+
+// // under 800px
+// @media(max-width:800px)
+//   #works
+//     >.container
+//       >.work
+//         >.work-img
+//           width: 400px
+//           height: 300px
+//           position:static;
+//         >.work-description
+//           position:static;
+//             padding: 0
+$layout-breakpoint-small: 800px
+
+@media (max-width: $layout-breakpoint-small)
+  #works
+    .container
+      .work
+        width: 100%
+        .work-img
+          width: 400px
+          height: 300px
+          position:static
+          left: auto
+          right: auto
+        .work-description
+          position:static
+          padding: 0
+          left: auto
+          right: auto
