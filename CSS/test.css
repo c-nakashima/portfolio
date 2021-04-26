@@ -70,7 +70,7 @@ header {
 
 header > .container {
   width: 90%;
-  max-width: 1004px;
+  max-width: 980px;
   height: 60px;
   margin: 0 auto;
   display: flex;
@@ -102,7 +102,7 @@ header > .container nav ul li:hover {
 }
 
 main {
-  max-width: 1004px;
+  max-width: 980px;
   height: 580px;
   margin: 0 auto;
   background: url("../img/eye-catch.png") 100%;
@@ -111,7 +111,7 @@ main {
 }
 
 main .container {
-  max-width: 1004px;
+  max-width: 980px;
   margin: 0 auto;
   position: absolute;
 }
@@ -150,9 +150,40 @@ main .container .message .job.-ja {
   padding: 2px 0px 0px 5px;
 }
 
+@media (max-width: 460px) {
+  main {
+    height: 400px;
+    background-size: 110%;
+  }
+  main .container .message {
+    left: 5%;
+    top: 80px;
+  }
+  main .container .message .name {
+    font-family: 'Playfair Display',serif;
+    font-size: 30px;
+    font-weight: 200;
+  }
+  main .container .message .job {
+    max-width: 300px;
+  }
+  main .container .message .job.-en {
+    margin-top: 10px;
+    padding-left: 5px;
+    font-size: 12px;
+    font-weight: 100;
+  }
+  main .container .message .job.-ja {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 1px 0px 0px 3px;
+  }
+}
+
 #about {
   width: 100%;
-  max-width: 1004px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -171,7 +202,7 @@ main .container .message .job.-ja {
 }
 
 #about .container .description {
-  max-width: 1004px;
+  max-width: 980px;
   margin: 0 auto;
   font-size: 18px;
   font-family: 'YuGothic';
@@ -179,16 +210,16 @@ main .container .message .job.-ja {
 }
 
 #about .container .services {
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 #about .container .services .service {
   width: 100%;
-  max-width: 1004px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 40px 50px;
-  background-color: #eee;
-  margin-bottom: 50px;
+  padding: 30px 50px;
+  background-color: #FAFAFA;
+  margin-bottom: 40px;
 }
 
 #about .container .services .service:nth-of-type(3) {
@@ -218,9 +249,8 @@ main .container .message .job.-ja {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 50%;
+  width: 40%;
   padding: 10px 30px 30px 30px;
-  background-color: #eee;
 }
 
 #about .container .services .service .service-contents dl dt {
@@ -251,9 +281,74 @@ main .container .message .job.-ja {
   line-height: 24px;
 }
 
+@media (max-width: 800px) {
+  #about .container .services {
+    margin-top: 40px;
+  }
+  #about .container .services .service {
+    margin-bottom: 40px;
+  }
+  #about .container .services .service .service-contents dl {
+    width: 50%;
+    padding: 10px 20px 20px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  #about .container .services .service {
+    margin-bottom: 30px;
+  }
+  #about .container .services .service .service-contents dl {
+    width: 50%;
+    min-width: 150px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 460px) {
+  #about .container .description {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 15px;
+  }
+  #about .container .services {
+    margin-top: 30px;
+  }
+  #about .container .services .service {
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+  #about .container .services .service h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+  #about .container .services .service h3::before {
+    content: "Frontend";
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-family: 'Montserrat','YuGothic',san-serif;
+  }
+  #about .container .services .service hr {
+    margin: 0px 0px 5px 0px;
+  }
+  #about .container .services .service .service-contents {
+    flex-direction: column;
+  }
+  #about .container .services .service .service-contents dl {
+    width: 100%;
+    padding: 8px;
+  }
+  #about .container .services .service .service-contents .service-description {
+    width: 100%;
+    padding: 8px;
+    margin-top: 0;
+  }
+}
+
 .works {
   width: 100%;
-  max-width: 1004px;
+  max-width: 980px;
   margin: 140px auto 0 auto;
 }
 
@@ -272,10 +367,14 @@ main .container .message .job.-ja {
 }
 
 .works .container .work {
-  width: 800px;
+  width: 100%;
   height: 450px;
   position: relative;
   margin: 0 auto 160px auto;
+}
+
+.works .container .work:nth-of-type(1) {
+  margin-top: 40px;
 }
 
 .works .container .work:nth-of-type(3) {
@@ -286,7 +385,7 @@ main .container .message .job.-ja {
   width: 580px;
   height: 400px;
   position: absolute;
-  background-color: #eee;
+  background-color: #FAFAFA;
   top: 0;
 }
 
@@ -334,9 +433,71 @@ main .container .message .job.-ja {
   left: 0;
 }
 
+@media (max-width: 800px) {
+  #works .container .work {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 0;
+  }
+  #works .container .work .work-img {
+    width: 70%;
+    height: 300px;
+    left: 0;
+  }
+  #works .container .work .work-description {
+    width: 55%;
+    height: 280px;
+    padding: 0;
+    top: 80px;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+  #works .container .work .work-description:hover {
+    opacity: 1;
+    transition: 1.5s;
+  }
+  #works .container .work .work-description ul {
+    padding: 40px;
+  }
+  #works .container .work:nth-of-type(odd) .work-img {
+    right: auto;
+    left: 0;
+  }
+  #works .container .work:nth-of-type(odd) .work-description {
+    right: 0;
+    left: auto;
+  }
+  #works .container .work:nth-of-type(even) .work-img {
+    right: 0;
+    left: auto;
+  }
+  #works .container .work:nth-of-type(even) .work-description {
+    right: auto;
+    left: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  #works .container .work {
+    height: 400px;
+  }
+  #works .container .work .work-img {
+    width: 85%;
+    height: 280px;
+  }
+  #works .container .work .work-description {
+    width: 60%;
+    height: 260px;
+    top: 60px;
+  }
+  #works .container .work .work-description ul {
+    padding: 20px;
+  }
+}
+
 #contact {
   width: 100%;
-  max-width: 1004px;
+  max-width: 980px;
   margin: 130px auto 0 auto;
 }
 
@@ -404,19 +565,8 @@ footer img:hover {
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
-  #works .container .work {
-    width: 100%;
-  }
-  #works .container .work .work-img {
-    width: 400px;
-    height: 300px;
-    left: auto;
-    right: auto;
-  }
-  #works .container .work .work-description {
-    padding: 0;
-    left: auto;
-    right: auto;
+@media (max-width: 460px) {
+  .container {
+    padding: 5px;
   }
 }

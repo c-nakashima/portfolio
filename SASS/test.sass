@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap')
 
 $COLOR_BLACK: #707070
-$COLOR_LIGHTGREY: #eee//#FAFAFA
+$COLOR_LIGHTGREY: #FAFAFA//#FAFAFA
 $BORDER: 0.1px solid #CCC
+$layout-tab: 800px
+$layout-sp: 460px
 // $BORDER: 0.5px solid $COLOR_BLACK
 
 // reset css
@@ -79,7 +81,7 @@ header
   // padding: 0 5%
   >.container
     width: 90%
-    max-width: 1004px
+    max-width: 980px
     height: 60px
     margin: 0 auto
     display: flex
@@ -101,16 +103,14 @@ header
             border-bottom: $BORDER
 
 main
-  // width: 100%
-  max-width: 1004px
+  max-width: 980px
   height: 580px
   margin: 0 auto
   background: url("../img/eye-catch.png") 100%
   background-size: contain
   background-repeat: no-repeat
   .container
-    // width: 100%
-    max-width: 1004px
+    max-width: 980px
     margin: 0 auto
     position: absolute
     .message
@@ -136,9 +136,34 @@ main
           font-weight: 300
           padding: 2px 0px 0px 5px
 
+@media (max-width: $layout-sp)
+  main
+    height: 400px
+    background-size: 110%;
+    .container
+      .message
+        left: 5%
+        top: 80px
+        .name
+          font-family: 'Playfair Display',serif
+          font-size: 30px
+          font-weight: 200
+        .job
+          max-width: 300px
+          &.-en
+            margin-top: 10px
+            padding-left: 5px
+            font-size: 12px
+            font-weight: 100
+          &.-ja
+            margin-top: 4px
+            font-size: 12px
+            font-weight: 300
+            padding: 1px 0px 0px 3px
+
 #about
   width: 100%
-  max-width: 1004px
+  max-width: 980px
   margin: 0 auto;
   .heading-top
     h2
@@ -150,20 +175,20 @@ main
     border-left: $BORDER
     border-bottom: $BORDER
     .description
-      max-width: 1004px
+      max-width: 980px
       margin: 0 auto
       font-size: 18px
       font-family: 'YuGothic'
       line-height: 28px
     .services
-      margin-top: 70px
+      margin-top: 40px
       .service
         width: 100%
-        max-width: 1004px
+        max-width: 980px
         margin: 0 auto
-        padding: 40px 50px
+        padding: 30px 50px
         background-color: $COLOR_LIGHTGREY
-        margin-bottom: 50px
+        margin-bottom: 40px
         &:nth-of-type(3)
           margin-bottom: 0px
         h3
@@ -185,9 +210,8 @@ main
             // flex-direction: row
             flex-wrap: wrap
             justify-content: space-between
-            width: 50%
+            width: 40%
             padding: 10px 30px 30px 30px
-            background-color: #eee
             dt
               width: calc(100% - 6em)
               font-size: 12px
@@ -207,9 +231,68 @@ main
             font-size: 12px
             line-height: 24px
 
+@media (max-width: $layout-tab)
+  #about
+    .container
+      .description
+      .services
+        margin-top: 40px
+        .service
+          margin-bottom: 40px
+          .service-contents
+            dl
+              width: 50%;
+              padding: 10px 20px 20px 20px;
+
+@media (max-width: 600px)
+  #about
+    .container
+      .description
+      .services
+        .service
+          margin-bottom: 30px
+          .service-contents
+            dl
+              width: 50%;
+              min-width: 150px;
+              padding: 10px;
+
+@media (max-width: $layout-sp)
+  #about
+    .container
+      .description
+        font-size: 14px
+        line-height: 22px
+        padding-top: 15px
+      .services
+        margin-top: 30px
+        .service
+          margin-bottom: 30px
+          padding: 15px
+          h3
+            margin-bottom: 8px
+            font-size: 18px;
+            &::before
+              content: "Frontend"
+              display: block
+              margin-bottom: 5px
+              font-size: 12px
+              font-family: 'Montserrat','YuGothic',san-serif
+          hr
+            margin: 0px 0px 5px 0px
+          .service-contents
+            flex-direction: column
+            dl
+              width: 100%
+              padding: 8px
+            .service-description
+              width: 100%
+              padding: 8px
+              margin-top: 0
+
 .works
   width: 100%
-  max-width: 1004px
+  max-width: 980px
   margin: 140px auto 0 auto;
   .heading-top
     h2
@@ -221,10 +304,12 @@ main
     border-right: $BORDER
     border-bottom: $BORDER
     .work
-      width: 800px
+      width: 100%
       height: 450px
       position: relative
       margin: 0 auto 160px auto
+      &:nth-of-type(1)
+        margin-top: 40px;
       &:nth-of-type(3)
         margin-bottom: 0
       .work-img
@@ -265,10 +350,63 @@ main
       &:nth-of-type(even)
         .work-description
           left: 0
+@media (max-width: $layout-tab)
+  #works
+    .container
+      .work
+        width: 100%
+        height: 400px
+        margin-bottom: 0
+        .work-img
+          width: 70%
+          height: 300px
+          left: 0
+        .work-description
+          width: 55%
+          height: 280px
+          padding: 0
+          top: 80px;
+          opacity: 0.3
+          cursor: pointer
+          &:hover
+            opacity: 1
+            transition: 1.5s
+          ul
+            padding: 40px
+      .work
+        &:nth-of-type(odd)
+          .work-img
+            right: auto
+            left: 0
+          .work-description
+            right: 0
+            left: auto
+        &:nth-of-type(even)
+          .work-img
+            right: 0
+            left: auto
+          .work-description
+            right: auto
+            left: 0
+
+@media (max-width: $layout-sp)
+  #works
+    .container
+      .work
+        height: 400px
+        .work-img
+          width: 85%
+          height: 280px
+        .work-description
+          width: 60%
+          height: 260px
+          top: 60px;
+          ul
+            padding: 20px
 
 #contact
   width: 100%
-  max-width: 1004px
+  max-width: 980px
   margin: 130px auto 0 auto;
   .heading-top
     h2
@@ -315,34 +453,6 @@ footer
     &:hover
       cursor: pointer
 
-
-// // under 800px
-// @media(max-width:800px)
-//   #works
-//     >.container
-//       >.work
-//         >.work-img
-//           width: 400px
-//           height: 300px
-//           position:static;
-//         >.work-description
-//           position:static;
-//             padding: 0
-$layout-breakpoint-small: 800px
-
-@media (max-width: $layout-breakpoint-small)
-  #works
-    .container
-      .work
-        width: 100%
-        .work-img
-          width: 400px
-          height: 300px
-          position:static
-          left: auto
-          right: auto
-        .work-description
-          position:static
-          padding: 0
-          left: auto
-          right: auto
+@media (max-width: $layout-sp)
+  .container
+    padding: 5px
