@@ -1,0 +1,90 @@
+button.js-btn
+  margin: 0
+  padding: 0
+  outline: 0
+  border: 0
+  border-radius: 0
+  background: transparent
+  color: inherit
+  vertical-align: middle
+  text-align: inherit
+  font: inherit
+  -webkit-appearance: none
+  appearance: none
+  &.btn
+    /* ボタンの配置位置  */
+    position: fixed
+    top: 32px
+    right: 16px
+    /* 最前面に */
+    z-index: 10
+    /* ボタンの大きさ  */
+    width: 48px
+    height: 48px
+    .btn-line
+      display: block
+      /* バーガー線の位置基準として設定 */
+      position: relative
+      /* 線の長さと高さ */
+      width: 100%
+      height: 4px
+      /* バーガー線の色 */
+      background-color: #d6d5d5
+      transition: .2s
+      &::before, &::after
+        content: ""
+        /* 基準線と同じ大きさと色 */
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: #d6d5d5
+        transition: .5s
+      &::before
+        /* 上の線の位置 */
+        transform: translateY(-16px)
+      &::after
+        /* 下の線の位置 */
+        transform: translateY(16px)
+      &.open
+        background-color: transparent
+
+.menu
+  display: flex
+  flex-direction: column
+  position: fixed
+  /* メニューの位置マイナス指定で画面外に */
+  right: -70%
+  width: 70%
+  height: 100vh
+  background-color: rgba(167, 148, 58, .7)
+  color: #efefef
+  transition: .3s
+  .menu-list
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    &:hover
+      background-color: rgba(255, 255, 255, .5)
+      color: #333
+      cursor: pointer
+      transition: .3s
+  &.open
+    position: absolute
+    right: 0
+
+@media screen and (min-width: 600px)
+  .btn
+    display: none
+
+@media screen and (min-width: 600px)
+  .menu
+    /* メニューを横に */
+    display: flex
+    flex-direction: row
+    position: fixed
+    top: 0
+    right: 0
+    width: 100%
+    height: 100px
