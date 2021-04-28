@@ -101,6 +101,44 @@ header > .container nav ul li:hover {
   border-bottom: 0.1px solid #CCC;
 }
 
+@media (max-width: 460px) {
+  header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 10;
+    opacity: 0.8;
+  }
+  header > .container {
+    width: 90%;
+    max-width: 980px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header > .container h1 {
+    font-size: 20px;
+    font-weight: 100;
+  }
+  header > .container nav ul {
+    display: flex;
+  }
+  header > .container nav ul li {
+    margin: 0px 10px;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  header > .container nav ul li:nth-of-type(3) {
+    margin: 0px 0px 0px 10px;
+  }
+  header > .container nav ul li:hover {
+    border-bottom: 0.1px solid #CCC;
+  }
+}
+
 main {
   max-width: 980px;
   height: 580px;
@@ -132,6 +170,14 @@ main .container .message .name {
   font-weight: 200;
 }
 
+main .container .message .name.-tab {
+  display: inline-block;
+}
+
+main .container .message .name.-sp {
+  display: none;
+}
+
 main .container .message .job {
   width: 300px;
 }
@@ -150,33 +196,36 @@ main .container .message .job.-ja {
   padding: 2px 0px 0px 5px;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 600px) {
   main {
-    height: 400px;
-    background-size: 110%;
+    height: 410px;
+    background: url("../img/sp_eye-catch.png") 110%;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   main .container .message {
     left: 5%;
-    top: 80px;
+    top: 180px;
   }
   main .container .message .name {
-    font-family: 'Playfair Display',serif;
     font-size: 30px;
-    font-weight: 200;
+  }
+  main .container .message .name.-tab {
+    display: none;
+  }
+  main .container .message .name.-sp {
+    display: inline-block;
   }
   main .container .message .job {
     max-width: 300px;
   }
   main .container .message .job.-en {
-    margin-top: 10px;
-    padding-left: 5px;
-    font-size: 12px;
-    font-weight: 100;
+    margin-top: 5px;
+    font-size: 9px;
   }
   main .container .message .job.-ja {
-    margin-top: 4px;
-    font-size: 12px;
-    font-weight: 300;
+    margin-top: 2px;
+    font-size: 10px;
     padding: 1px 0px 0px 3px;
   }
 }
@@ -295,6 +344,9 @@ main .container .message .job.-ja {
 }
 
 @media (max-width: 600px) {
+  #about .container .description {
+    line-height: 20px;
+  }
   #about .container .services .service {
     margin-bottom: 30px;
   }
@@ -306,10 +358,16 @@ main .container .message .job.-ja {
 }
 
 @media (max-width: 460px) {
+  #about .heading-top h2 {
+    font-family: 'Playfair Display',serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin: 0 10% -15px 10%;
+  }
   #about .container .description {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 15px;
+    padding-top: 8px;
   }
   #about .container .services {
     margin-top: 30px;
@@ -343,6 +401,7 @@ main .container .message .job.-ja {
     width: 100%;
     padding: 8px;
     margin-top: 0;
+    line-height: 18px;
   }
 }
 
@@ -478,8 +537,18 @@ main .container .message .job.-ja {
 }
 
 @media (max-width: 460px) {
+  #works {
+    margin: 100px auto 0 auto;
+  }
+  #works .heading-top h2 {
+    font-family: 'Playfair Display',serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin: 0 10% -15px 10%;
+  }
   #works .container .work {
     height: 400px;
+    margin-top: 20px;
   }
   #works .container .work .work-img {
     width: 85%;
@@ -543,6 +612,26 @@ main .container .message .job.-ja {
 
 #contact .container ul li:nth-of-type(5):hover {
   border-bottom: 0.1px solid #CCC;
+}
+
+@media (max-width: 800px) {
+  #contact .container .description {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  #contact {
+    margin: 100px auto 0 auto;
+  }
+  #contact .heading-top h2 {
+    font-family: 'Playfair Display',serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin: 0 10% -15px 10%;
+  }
 }
 
 footer {
