@@ -141,6 +141,7 @@ main .container .message .name.-sp {
 
 main .container .message .job {
   width: 300px;
+  display: inline-block;
 }
 
 main .container .message .job.-en {
@@ -166,6 +167,7 @@ main .container .message .job.-ja {
   }
   main .container .message {
     top: 180px;
+    left: 8%;
   }
   main .container .message .name {
     font-size: 30px;
@@ -177,7 +179,7 @@ main .container .message .job.-ja {
     display: inline-block;
   }
   main .container .message .job {
-    max-width: 300px;
+    max-width: 220px;
   }
   main .container .message .job.-en {
     margin-top: 5px;
