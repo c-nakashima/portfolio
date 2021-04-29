@@ -6,7 +6,6 @@ $COLOR_LIGHTGREY: #FAFAFA//#FAFAFA
 $BORDER: 0.1px solid #CCC
 $layout-tab: 800px
 $layout-sp: 460px
-// $BORDER: 0.5px solid $COLOR_BLACK
 
 // reset css
 // http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)//
@@ -74,13 +73,12 @@ a
   margin: 0 10% -15px 10%
 
 header
-  width: 100%
+  width: 100vw
   height: 60px
   position: fixed
   background-color: #ffffff
   z-index: 10
   opacity: 0.8
-  // padding: 0 5%
   >.container
     width: 90%
     max-width: 980px
@@ -94,7 +92,6 @@ header
       font-weight: 100
     nav
       ul
-        display: flex
         li
           margin: 0px 10px
           font-size: 20px
@@ -104,40 +101,9 @@ header
           &:hover
             border-bottom: $BORDER
 
-@media (max-width: $layout-sp)
-  header
-    width: 100%
-    height: 60px
-    position: fixed
-    background-color: #ffffff
-    z-index: 10
-    opacity: 0.8
-    // padding: 0 5%
-    >.container
-      width: 90%
-      max-width: 980px
-      height: 60px
-      margin: 0 auto
-      display: flex
-      justify-content: space-between
-      align-items: center
-      h1
-        font-size: 20px
-        font-weight: 100
-      nav
-        ul
-          display: flex
-          li
-            margin: 0px 10px
-            font-size: 20px
-            font-weight: 100
-            &:nth-of-type(3)
-              margin: 0px 0px 0px 10px
-            &:hover
-              border-bottom: $BORDER
-
 
 main
+  padding-top: 60px
   max-width: 980px
   height: 580px
   margin: 0 auto
@@ -145,6 +111,7 @@ main
   background-size: contain
   background-repeat: no-repeat
   .container
+    width: 100%
     max-width: 980px
     margin: 0 auto
     position: absolute
@@ -152,6 +119,7 @@ main
       position: relative
       left: 86px
       top: 150px
+      width: 50%
       p
         margin: 0
       .name
@@ -183,7 +151,6 @@ main
     background-repeat: no-repeat
     .container
       .message
-        left: 5%
         top: 180px
         .name
           font-size: 30px

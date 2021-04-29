@@ -11,68 +11,73 @@ button.js-btn
   font: inherit
   -webkit-appearance: none
   appearance: none
+  cursor: pointer
   &.btn
-    /* ボタンの配置位置  */
-    position: fixed
-    top: 32px
-    right: 16px
-    /* 最前面に */
-    z-index: 10
-    /* ボタンの大きさ  */
-    width: 48px
-    height: 48px
+    width: 28px
+    height: 28px
     .btn-line
       display: block
-      /* バーガー線の位置基準として設定 */
       position: relative
-      /* 線の長さと高さ */
       width: 100%
-      height: 4px
-      /* バーガー線の色 */
-      background-color: #d6d5d5
+      height: 2px
+      background-color: #707070
       transition: .2s
       &::before, &::after
         content: ""
-        /* 基準線と同じ大きさと色 */
         position: absolute
         width: 100%
         height: 100%
-        background-color: #d6d5d5
-        transition: .5s
+        background-color: #707070
+        transition: .1s
       &::before
-        /* 上の線の位置 */
-        transform: translateY(-16px)
+        transform: translateY(-8px)
       &::after
-        /* 下の線の位置 */
-        transform: translateY(16px)
+        transform: translateY(8px)
       &.open
         background-color: transparent
+        &::before
+          content: ""
+          background-color: #707070
+          transition: .2s
+          transform: rotate(45deg)
+        &::after
+          content: ""
+          background-color: #707070
+          transition: .2s
+          transform: rotate(-45deg)
 
 .menu
-  display: flex
-  flex-direction: column
-  position: fixed
-  /* メニューの位置マイナス指定で画面外に */
+  display: none
   right: -70%
-  width: 70%
+  width: 100%
   height: 100vh
-  background-color: rgba(167, 148, 58, .7)
+  background-color: rgba(255, 255, 255, 1)
   color: #efefef
-  transition: .3s
+  transition: 0.1s
   .menu-list
     display: flex
     align-items: center
     justify-content: center
     width: 100%
     height: 100%
+    font-size: 16px
     &:hover
-      background-color: rgba(255, 255, 255, .5)
-      color: #333
+      background-color: rgba(3, 3, 3, .2)
+      color: #707070
       cursor: pointer
       transition: .3s
   &.open
+    display: flex
+    flex-direction: column
     position: absolute
+    top: 0
     right: 0
+    font-size: 16px
+    .menu-list
+      margin: 0
+      font-size: 22px
+      &:nth-of-type(3)
+        margin: 0
 
 @media screen and (min-width: 600px)
   .btn
@@ -80,11 +85,6 @@ button.js-btn
 
 @media screen and (min-width: 600px)
   .menu
-    /* メニューを横に */
     display: flex
-    flex-direction: row
-    position: fixed
-    top: 0
     right: 0
-    width: 100%
-    height: 100px
+    height: 60px

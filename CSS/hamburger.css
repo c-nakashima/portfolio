@@ -1,4 +1,3 @@
-@charset "UTF-8";
 button.js-btn {
   margin: 0;
   padding: 0;
@@ -12,67 +11,66 @@ button.js-btn {
   font: inherit;
   -webkit-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 
 button.js-btn.btn {
-  /* ボタンの配置位置  */
-  position: fixed;
-  top: 32px;
-  right: 16px;
-  /* 最前面に */
-  z-index: 10;
-  /* ボタンの大きさ  */
-  width: 48px;
-  height: 48px;
+  width: 28px;
+  height: 28px;
 }
 
 button.js-btn.btn .btn-line {
   display: block;
-  /* バーガー線の位置基準として設定 */
   position: relative;
-  /* 線の長さと高さ */
   width: 100%;
-  height: 4px;
-  /* バーガー線の色 */
-  background-color: #d6d5d5;
+  height: 2px;
+  background-color: #707070;
   transition: .2s;
 }
 
 button.js-btn.btn .btn-line::before, button.js-btn.btn .btn-line::after {
   content: "";
-  /* 基準線と同じ大きさと色 */
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #d6d5d5;
-  transition: .5s;
+  background-color: #707070;
+  transition: .1s;
 }
 
 button.js-btn.btn .btn-line::before {
-  /* 上の線の位置 */
-  transform: translateY(-16px);
+  transform: translateY(-8px);
 }
 
 button.js-btn.btn .btn-line::after {
-  /* 下の線の位置 */
-  transform: translateY(16px);
+  transform: translateY(8px);
 }
 
 button.js-btn.btn .btn-line.open {
   background-color: transparent;
 }
 
+button.js-btn.btn .btn-line.open::before {
+  content: "";
+  background-color: #707070;
+  transition: .2s;
+  transform: rotate(45deg);
+}
+
+button.js-btn.btn .btn-line.open::after {
+  content: "";
+  background-color: #707070;
+  transition: .2s;
+  transform: rotate(-45deg);
+}
+
 .menu {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  /* メニューの位置マイナス指定で画面外に */
+  display: none;
   right: -70%;
-  width: 70%;
+  width: 100%;
   height: 100vh;
-  background-color: rgba(167, 148, 58, 0.7);
+  background-color: white;
   color: #efefef;
-  transition: .3s;
+  transition: 0.1s;
 }
 
 .menu .menu-list {
@@ -81,18 +79,32 @@ button.js-btn.btn .btn-line.open {
   justify-content: center;
   width: 100%;
   height: 100%;
+  font-size: 16px;
 }
 
 .menu .menu-list:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #333;
+  background-color: rgba(3, 3, 3, 0.2);
+  color: #707070;
   cursor: pointer;
   transition: .3s;
 }
 
 .menu.open {
+  display: flex;
+  flex-direction: column;
   position: absolute;
+  top: 0;
   right: 0;
+  font-size: 16px;
+}
+
+.menu.open .menu-list {
+  margin: 0;
+  font-size: 22px;
+}
+
+.menu.open .menu-list:nth-of-type(3) {
+  margin: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -103,13 +115,8 @@ button.js-btn.btn .btn-line.open {
 
 @media screen and (min-width: 600px) {
   .menu {
-    /* メニューを横に */
     display: flex;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
     right: 0;
-    width: 100%;
-    height: 100px;
+    height: 60px;
   }
 }
