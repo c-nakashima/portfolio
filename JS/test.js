@@ -35,7 +35,6 @@ $(function(){
   });
 
 //onscroll
-//onscroll
 window.onscroll = function()
 {
   let getTargetOffset = function(target){
@@ -44,30 +43,39 @@ window.onscroll = function()
   }
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   let bottom = scrollTop + document.documentElement.clientHeight;
-  // let showContent = function(target, heading, fadeInContent){
-  //   let top = getTargetOffset(target);
+
+  function fadeSection(target,section,backgroundColor,innerElem,){
+    const top = getTargetOffset(target);
+    if( top < bottom){
+      $('#' + section + '> .container').animate({
+        'backgroundColor': `${backgroundColor}`
+      },2600);
+    }
+  }
+  // function fadeAbout(target,section,backgroundColor,innerElem,){
+  //   const top = getTargetOffset(target);
+  //   if(top < bottom){
+  //     $('#' + section + '> .container').animate({
+  //       'backgroundColor': `${backgroundColor}`
+  //     },2600);
+  //   }
+  // }
+  // function fadeWorks(target,section,backgroundColor,innerElem,){
+  //   const top = getTargetOffset(target);
   //   if( top < bottom){
-  //     //fade in
-  //     $(heading).stop().addClass("-showing");
-  //     $(fadeInContent).on("inview", function (isInView) {
-  //       if (isInView) {
-  //         $(this).stop().addClass("-showing");
-  //       }
-  //     });
+  //     $('#' + section + '> .container').animate({
+  //       'backgroundColor': `${backgroundColor}`
+  //     },2600);
   //   }
   // }
 
-  // showContent(about,".heading-top",".service",".about");
-  // showContent(works,".heading-below",".work",".works");
-  // showContent(contact,".heading-below",".contact",".contact");
 
-  let top = getTargetOffset(works);
-  if( top < bottom){
-    console.log('hoge')
-    //fade in
-    $(".container").stop().addClass("-showing");
-    $(".work-description").stop().addClass("-showing");
-  }
+  fadeSection(about,'about','#FFFFEE');
+  fadeSection(works,'works','#FFFFEE');
+  fadeSection(contact,'contact','#FFFFEE');
+  // fadeAbout(about,'about','#FFFFEE');
+  // fadeWorks(works,'works','#FFFFEE');
 
-  
+  //works 960px~
+  //contact 2355px~
 }
