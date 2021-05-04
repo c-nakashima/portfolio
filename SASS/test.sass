@@ -77,7 +77,7 @@ header
   height: 60px
   position: fixed
   background-color: #ffffff
-  z-index: 10
+  z-index: 20
   opacity: 0.8
   >.container
     width: 90%
@@ -93,14 +93,11 @@ header
     nav
       ul
         li
-          margin: 0px 10px
+          padding: 0px 10px
           font-size: 20px
           font-weight: 100
-          &:nth-of-type(3)
-            margin: 0px 0px 0px 10px
           &:hover
             border-bottom: $BORDER
-
 
 main
   padding-top: 60px
@@ -173,7 +170,7 @@ main
 #about
   width: 100%
   max-width: 980px
-  margin: 0 auto;
+  margin: 0 auto
   .heading-top
     h2
       @include h2
@@ -186,9 +183,9 @@ main
     .description
       max-width: 980px
       margin: 0 auto
-      font-size: 18px
+      font-size: 16px
       font-family: 'YuGothic'
-      line-height: 28px
+      line-height: 27px
     .services
       margin-top: 40px
       .service
@@ -250,22 +247,22 @@ main
           margin-bottom: 40px
           .service-contents
             dl
-              width: 50%;
-              padding: 10px 20px 20px 20px;
+              width: 50%
+              padding: 10px 20px 20px 20px
 
 @media (max-width: 600px)
   #about
     .container
       .description
-        line-height: 20px;
+        line-height: 20px
       .services
         .service
           margin-bottom: 30px
           .service-contents
             dl
-              width: 50%;
-              min-width: 150px;
-              padding: 10px;
+              width: 50%
+              min-width: 150px
+              padding: 10px
 
 @media (max-width: $layout-sp)
   #about
@@ -284,7 +281,7 @@ main
           padding: 15px
           h3
             margin-bottom: 8px
-            font-size: 18px;
+            font-size: 18px
             &::before
               content: "Frontend"
               display: block
@@ -304,11 +301,10 @@ main
               margin-top: 0
               line-height: 18px
 
-
 .works
   width: 100%
   max-width: 980px
-  margin: 140px auto 0 auto;
+  margin: 140px auto 0 auto
   .heading-top
     h2
       @include h2
@@ -318,43 +314,63 @@ main
     border-top: $BORDER
     border-right: $BORDER
     border-bottom: $BORDER
+    &.-showing
+      background-color: lightyellow
     .work
       width: 100%
-      height: 450px
+      height: 400px
       position: relative
-      margin: 0 auto 160px auto
+      margin: 0 auto 110px auto
       &:nth-of-type(1)
-        margin-top: 40px;
+        margin-top: 40px
       &:nth-of-type(3)
         margin-bottom: 0
       .work-img
-        width: 580px
-        height: 400px
+        width: 600px
+        height: 330px
         position: absolute
         background-color: $COLOR_LIGHTGREY
         top: 0
+        overflow: scroll
+        box-shadow: 1px 2px 35px rgba(9,9,9,.05)
+        &:hover
+          transition: 2s
+          z-index: 10
+        a
+          img
+            width: 600px
+            cursor: pointer
       &:nth-of-type(odd)
         .work-img
-          background-color: pink
+          background-color: #FFFFFF
           left: 0
       &:nth-of-type(even)
         .work-img
           right: 0
       .work-description
-        width: 410px
-        height: 330px
+        width: 360px
+        height: 300px
         position: absolute
         border: 0.1px solid #FFF
         box-shadow: 1px 2px 20px rgba(9,9,9,.02)
         z-index: 1
         bottom: 0
-        background-color: #FFFFFF
+        background-color: rgb(255,255,255)
+        opacity: .2
+        &.-showing
+          opacity: .8
+        &:hover
+          background-color: rgb(255,255,255)
+          opacity: 1
+          transition: .5s
+          cursor: pointer
         ul
-          padding: 60px 70px
+          padding: 36px 30px
           font-family: 'Montserrat',sans-serif
           font-weight: 300
           li
-            margin-bottom: 30px
+            margin-bottom: 20px
+            line-height: 20px
             span
               display: block
               width: 100%
@@ -377,18 +393,20 @@ main
           width: 70%
           height: 300px
           left: 0
+          a
+            img
+              width: 100%
         .work-description
-          width: 55%
-          height: 280px
+          width: 50%
+          height: 240px
           padding: 0
-          top: 80px;
-          opacity: 0.3
-          cursor: pointer
-          &:hover
-            opacity: 1
-            transition: 1.5s
+          top: 80px
           ul
-            padding: 40px
+            padding: 18px
+            font-size: 12px
+            li
+              margin-bottom: 12px
+              line-height: 18px
       .work
         &:nth-of-type(odd)
           .work-img
@@ -419,16 +437,16 @@ main
           width: 85%
           height: 280px
         .work-description
-          width: 60%
+          width: 50%
           height: 260px
-          top: 60px;
+          top: 60px
           ul
-            padding: 20px
+            padding: 14px
 
 #contact
   width: 100%
   max-width: 980px
-  margin: 130px auto 0 auto;
+  margin: 130px auto 0 auto
   .heading-top
     h2
       @include h2
@@ -463,13 +481,13 @@ main
   #contact
     .container
       .description
-        font-size: 14px;
-        line-height: 22px;
-        padding-top: 15px;
+        font-size: 14px
+        line-height: 22px
+        padding-top: 15px
 
 @media (max-width: $layout-sp)
   #contact
-    margin: 100px auto 0 auto;
+    margin: 100px auto 0 auto
     .heading-top
       h2
         @include h2_sp

@@ -64,7 +64,7 @@ header {
   height: 60px;
   position: fixed;
   background-color: #ffffff;
-  z-index: 10;
+  z-index: 20;
   opacity: 0.8;
 }
 
@@ -84,13 +84,9 @@ header > .container h1 {
 }
 
 header > .container nav ul li {
-  margin: 0px 10px;
+  padding: 0px 10px;
   font-size: 20px;
   font-weight: 100;
-}
-
-header > .container nav ul li:nth-of-type(3) {
-  margin: 0px 0px 0px 10px;
 }
 
 header > .container nav ul li:hover {
@@ -215,9 +211,9 @@ main .container .message .job.-ja {
 #about .container .description {
   max-width: 980px;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'YuGothic';
-  line-height: 28px;
+  line-height: 27px;
 }
 
 #about .container .services {
@@ -387,11 +383,15 @@ main .container .message .job.-ja {
   border-bottom: 0.1px solid #CCC;
 }
 
+.works .container.-showing {
+  background-color: lightyellow;
+}
+
 .works .container .work {
   width: 100%;
-  height: 450px;
+  height: 400px;
   position: relative;
-  margin: 0 auto 160px auto;
+  margin: 0 auto 110px auto;
 }
 
 .works .container .work:nth-of-type(1) {
@@ -403,15 +403,27 @@ main .container .message .job.-ja {
 }
 
 .works .container .work .work-img {
-  width: 580px;
-  height: 400px;
+  width: 600px;
+  height: 330px;
   position: absolute;
   background-color: #FAFAFA;
   top: 0;
+  overflow: scroll;
+  box-shadow: 1px 2px 35px rgba(9, 9, 9, 0.05);
+}
+
+.works .container .work .work-img:hover {
+  transition: 2s;
+  z-index: 10;
+}
+
+.works .container .work .work-img a img {
+  width: 600px;
+  cursor: pointer;
 }
 
 .works .container .work:nth-of-type(odd) .work-img {
-  background-color: pink;
+  background-color: #FFFFFF;
   left: 0;
 }
 
@@ -420,24 +432,37 @@ main .container .message .job.-ja {
 }
 
 .works .container .work .work-description {
-  width: 410px;
-  height: 330px;
+  width: 360px;
+  height: 300px;
   position: absolute;
   border: 0.1px solid #FFF;
   box-shadow: 1px 2px 20px rgba(9, 9, 9, 0.02);
   z-index: 1;
   bottom: 0;
-  background-color: #FFFFFF;
+  background-color: white;
+  opacity: .2;
+}
+
+.works .container .work .work-description.-showing {
+  opacity: .8;
+}
+
+.works .container .work .work-description:hover {
+  background-color: white;
+  opacity: 1;
+  transition: .5s;
+  cursor: pointer;
 }
 
 .works .container .work .work-description ul {
-  padding: 60px 70px;
+  padding: 36px 30px;
   font-family: 'Montserrat',sans-serif;
   font-weight: 300;
 }
 
 .works .container .work .work-description ul li {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  line-height: 20px;
 }
 
 .works .container .work .work-description ul li span {
@@ -465,20 +490,22 @@ main .container .message .job.-ja {
     height: 300px;
     left: 0;
   }
+  #works .container .work .work-img a img {
+    width: 100%;
+  }
   #works .container .work .work-description {
-    width: 55%;
-    height: 280px;
+    width: 50%;
+    height: 240px;
     padding: 0;
     top: 80px;
-    opacity: 0.3;
-    cursor: pointer;
-  }
-  #works .container .work .work-description:hover {
-    opacity: 1;
-    transition: 1.5s;
   }
   #works .container .work .work-description ul {
-    padding: 40px;
+    padding: 18px;
+    font-size: 12px;
+  }
+  #works .container .work .work-description ul li {
+    margin-bottom: 12px;
+    line-height: 18px;
   }
   #works .container .work:nth-of-type(odd) .work-img {
     right: auto;
@@ -517,12 +544,12 @@ main .container .message .job.-ja {
     height: 280px;
   }
   #works .container .work .work-description {
-    width: 60%;
+    width: 50%;
     height: 260px;
     top: 60px;
   }
   #works .container .work .work-description ul {
-    padding: 20px;
+    padding: 14px;
   }
 }
 
