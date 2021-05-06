@@ -34,48 +34,41 @@ $(function(){
     });
   });
 
-//onscroll
+//onscroll change displayed background color
 window.onscroll = function()
 {
-  let getTargetOffset = function(target){
-    const targetOffset = target.getBoundingClientRect();
-    return targetOffset.top;
+  function getScrollBottom() {
+    var body = window.document.body;
+    var html = window.document.documentElement;
+    var scrollTop = body.scrollTop || html.scrollTop;
+    return html.scrollHeight - html.clientHeight - scrollTop;
   }
-  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  let bottom = scrollTop + document.documentElement.clientHeight;
 
-  function fadeSection(target,section,backgroundColor,innerElem,){
-    const top = getTargetOffset(target);
-    if( top < bottom){
-      $('#' + section + '> .container').animate({
-        'backgroundColor': `${backgroundColor}`
-      },2600);
+  function changeColor() {  
+    var scrollY = window.pageYOffset;
+    var triggerAbout = document.getElementById('about');
+    var triggerWorks = document.getElementById('works');
+    var triggerContact = document.getElementById('contact');
+
+    var trigger1top = triggerAbout.getBoundingClientRect().top;
+    var trigger1bottom = triggerAbout.getBoundingClientRect().bottom;
+    var trigger3top = triggerContact.getBoundingClientRect().top;
+  
+    if(scrollY > trigger1top && trigger1bottom > scrollY) {
+      triggerAbout.classList.add('on-display');
+      triggerWorks.classList.remove('on-display');
+      triggerContact.classList.remove('on-display');
+    } else if(trigger3top > scrollY > trigger1bottom && getScrollBottom()>20) {
+      triggerWorks.classList.add('on-display');
+      triggerAbout.classList.remove('on-display');
+      triggerContact.classList.remove('on-display');
+    }else if(20 > getScrollBottom() ){
+      triggerContact.classList.add('on-display');
+      triggerWorks.classList.remove('on-display');
+      triggerAbout.classList.remove('on-display');
     }
   }
-  // function fadeAbout(target,section,backgroundColor,innerElem,){
-  //   const top = getTargetOffset(target);
-  //   if(top < bottom){
-  //     $('#' + section + '> .container').animate({
-  //       'backgroundColor': `${backgroundColor}`
-  //     },2600);
-  //   }
-  // }
-  // function fadeWorks(target,section,backgroundColor,innerElem,){
-  //   const top = getTargetOffset(target);
-  //   if( top < bottom){
-  //     $('#' + section + '> .container').animate({
-  //       'backgroundColor': `${backgroundColor}`
-  //     },2600);
-  //   }
-  // }
+  window.addEventListener('scroll', changeColor);
+  
 
-
-  fadeSection(about,'about','#FFFFEE');
-  fadeSection(works,'works','#FFFFEE');
-  fadeSection(contact,'contact','#FFFFEE');
-  // fadeAbout(about,'about','#FFFFEE');
-  // fadeWorks(works,'works','#FFFFEE');
-
-  //works 960px~
-  //contact 2355px~
 }

@@ -48,6 +48,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 * {
   box-sizing: border-box;
   color: #707070;
@@ -55,8 +59,8 @@ table {
   font-size: 20px;
 }
 
-a {
-  text-decoration: none;
+.on-display .container {
+  background-color: #FFFFEE;
 }
 
 header {
