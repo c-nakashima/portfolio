@@ -1,0 +1,10 @@
+// Common
+@use "_common.scss";
+@use "_reset.scss";
+@use "_variable.scss";
+
+//Section
+@use "Section/_main.scss";
+
+// Component
+@use "Component/_header.scss";
