@@ -89,6 +89,14 @@ main {
   width: 50%;
 }
 
+.block-summary .block-summary-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+}
+
 header {
   padding: 24px;
 }
