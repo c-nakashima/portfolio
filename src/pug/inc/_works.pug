@@ -1,15 +1,62 @@
 h2 Works 
-.bloc.block-summary 
-  h3 Summary
-    ul.block-summary-list
-      li.year 
-        .vis 3years
-        .title as a designer/developer
-      li.ratio
-        .vis 7:1
-        .title Client Work : In-house
-      li.industry 
-        .vis pie chart
-        .title Project Industries 
+.works__summary 
+  h3.works__summary-title Summary
+    ul.works__summary-list
+      li.works__summary-list-item.year 
+        .works__summary-list-item-content--vis 3years
+        .works__summary-list-item-content--title as a designer/developer
+      li.works__summary-list-item.ratio
+        .works__summary-list-item-content--vis 7:1
+        .works__summary-list-item-content--title Client Work : In-house
+      li.works__summary-list-item.industry 
+        .works__summary-list-item-content--vis pie chart
+        .works__summary-list-item-content--title Project Industries 
+.works__projects
+  h3 Projects
+    ul.works__projects-list
+  -
+    const list = [
+      {
+        num: 0,
+        text: "UX Case Study : Flatmates revised prototype",
+        pjdescription: "RMIT Online presentation work",
+        term: "Mar 2023 - May 2023",
+        bgColor:"rgba(36, 45, 59, 0.84)",
+        textColor:"rgb(255,255,255)"
+      },
+      {
+        num: 1,
+        text: "Jess J Support Coordination Website Renewal",
+        pjdescription: "Website for a freelance Support Coordinator",
+        term: "Sep 2023 - Oct 2023",
+        bgColor:"rgba(101, 79, 8, 0.84)",
+        textColor:"rgb(255,255,255)"
+      },
+      {
+        num: 2,
+        text: "MetaStanza: Web component for data visualization ",
+        pjdescription: "Showcase Page - MetaStanza",
+        term: "Aug 2020 - Mar 2021",
+        bgColor:"rgba(241, 85, 98, 0.84)",
+        textColor:"rgb(255,255,255)"
+      },
+      {
+        num: 3,
+        text: "Flyer for a local coffee shop",
+        pjdescription: "Created a flyer to inform about the local coffee shop's participation in an event",
+        term: "Dec 2022 - Jan 2023",
+        bgColor:"rgba(224, 207, 117, 0.84)",
+        textColor:"#594424"
+      },
+    ]
+  each item in list
+    li.works__projects-list-item
+      img.works__projects-list-item-content--bg(src=`./img/section-full-${item.num}.png`)
+      .works__projects-list-item-content--front(style=`background-color: ${item.bgColor}; color: ${item.textColor}`)
+        h4=item.text
+        .subtexts
+          p.sub=item.pjdescription
+          p.sub=item.term
+      
 
   

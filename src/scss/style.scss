@@ -1,11 +1,11 @@
 // Common
-@use "_common.scss";
-@use "_reset.scss";
-@use "_variable.scss";
+@use "base/_base.scss";
+@use "base/_reset.scss";
+@use "base/_variable.scss";
 
-//Section
-@use "Section/_main.scss";
-@use "Section/_works.scss";
+//page
+@use "page/_main.scss";
+@use "page/_works.scss";
 
-// Component
-@use "Component/_header.scss";
+// module
+@use "module/_header.scss";
