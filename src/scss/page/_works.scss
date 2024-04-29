@@ -1,10 +1,10 @@
 // @forward "../variable.scss";
 @import "../base/variable";
+@import "../base/mixin";
 
 .works__summary {
   .works__summary-list {
-    display: flex;
-    flex-direction: row;
+    @include flexRow;
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;

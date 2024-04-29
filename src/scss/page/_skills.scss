@@ -1,0 +1,26 @@
+@import "../base/variable";
+@import "../base/mixin";
+
+//layout
+.skills__skillset {
+  .skills__skillset-list {
+    @include flexRow;
+    .skills__skillset-list-item {
+      @include flexCol;
+      .skills__skillset-icon-list {
+        @include flexRow;
+        .skills__skillset-icon {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+}
+
+.skills__skillset-list-item {
+  .skills__skillset-list-item-content--img {
+    width: 94px;
+    height: 94px;
+  }
+}

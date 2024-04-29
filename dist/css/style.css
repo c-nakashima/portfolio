@@ -115,6 +115,31 @@ main {
   z-index: 100;
 }
 
+.skills__skillset .skills__skillset-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.skills__skillset .skills__skillset-list .skills__skillset-list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills__skillset .skills__skillset-list .skills__skillset-list-item .skills__skillset-icon-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.skills__skillset .skills__skillset-list .skills__skillset-list-item .skills__skillset-icon-list .skills__skillset-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.skills__skillset-list-item .skills__skillset-list-item-content--img {
+  height: 94px;
+  width: 94px;
+}
+
 header {
   padding: 24px;
 }
