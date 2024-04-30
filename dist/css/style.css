@@ -140,6 +140,10 @@ main {
   width: 94px;
 }
 
+.aboutme__overview .aboutme__overview-img {
+  width: 400px;
+}
+
 header {
   padding: 24px;
 }
