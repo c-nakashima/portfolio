@@ -4,12 +4,11 @@ html(lang="ja")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="./css/variable.css?ver")
     link(rel="stylesheet", href="./css/style.css?ver")
     title Portfolio | Chisato Nakashima
-  header
-    include inc/_header
   body
+    header
+      include inc/_header
     .container
       main
         include inc/_main
@@ -19,5 +18,7 @@ html(lang="ja")
         include inc/_skills
       section
         include inc/_aboutme
+    footer
+      include inc/_footer
       
-  script(src="./js/script.js?ver")
+  script(src="./js/bundle.js?ver")

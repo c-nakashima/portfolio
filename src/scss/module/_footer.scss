@@ -1,13 +1,16 @@
+@import "../base/variable";
+@import "../base/mixin";
+
 header {
   padding: 24px;
 }
 
-.header__content {
+.footer__content {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  .header__content-right {
+  .right {
     display: flex;
     nav {
       ul {
@@ -15,7 +18,7 @@ header {
         flex-direction: row;
       }
     }
-    .header__content-contacts {
+    .contacts {
       display: flex;
       flex-direction: row;
     }

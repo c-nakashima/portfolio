@@ -148,23 +148,48 @@ header {
   padding: 24px;
 }
 
-.header-content {
+.header__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
 
-.header-content .right {
+.header__content .header__content-right {
   display: flex;
 }
 
-.header-content .right nav ul {
+.header__content .header__content-right nav ul {
   display: flex;
   flex-direction: row;
 }
 
-.header-content .right .contacts {
+.header__content .header__content-right .header__content-contacts {
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  padding: 24px;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer__content .right {
+  display: flex;
+}
+
+.footer__content .right nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__content .right .contacts {
   display: flex;
   flex-direction: row;
 }
