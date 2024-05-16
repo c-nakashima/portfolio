@@ -12,11 +12,13 @@ header {
   font-family: $font-selif;
   font-weight: light;
   .header__content-logo {
+    font-family: $font-selif;
     font-size: 2rem;
   }
   .header__content-right {
     font-size: 1.3rem;
     display: flex;
+    align-items: center;
     nav {
       ul {
         display: flex;

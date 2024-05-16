@@ -1,3 +1,5 @@
+@import "../base/variable";
+
 main {
   display: flex;
   flex-direction: row;
@@ -9,17 +11,26 @@ main {
   background-position: right;
 }
 
-.text-group {
-  margin-top: 200px;
+.main__content {
+  margin-top: 180px;
   width: 400px;
   height: auto;
-  h1,
-  .sub {
+  h1.main__content-text--title,
+  .main__content-text--sub {
     background-color: rgba(255, 255, 255, 0.6);
   }
-}
-
-.img-container {
-  width: 50%;
-  height: 100%;
+  h1.main__content-text--title {
+    width: 600px;
+    margin-bottom: 32px;
+    font-family: $font-selif;
+    font-size: $font-size-main;
+    line-height: $line-hight-main;
+    font-weight: 400;
+  }
+  .main__content-text--sub {
+    margin-bottom: 48px;
+    width: 500px;
+    font-size: $font-size-sub-copy;
+    line-height: $line-hight-sub-copy;
+  }
 }
