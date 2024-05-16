@@ -1,3 +1,5 @@
+@import "../base/variable";
+
 header {
   padding: 24px;
 }
@@ -7,17 +9,32 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: $font-selif;
+  font-weight: light;
+  .header__content-logo {
+    font-size: 2rem;
+  }
   .header__content-right {
+    font-size: 1.3rem;
     display: flex;
     nav {
       ul {
         display: flex;
         flex-direction: row;
+        li {
+          margin-right: 24px;
+        }
       }
     }
     .header__content-contacts {
       display: flex;
       flex-direction: row;
+      .header__content-contacts-item {
+        .header__content-contacts-item--icon {
+          height: 2rem;
+          margin-right: 12px;
+        }
+      }
     }
   }
 }

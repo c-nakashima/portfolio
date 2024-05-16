@@ -151,12 +151,19 @@ header {
 .header__content {
   display: flex;
   flex-direction: row;
+  font-family: "Playfair Display", serif;
+  font-weight: light;
   justify-content: space-between;
   width: 100%;
 }
 
+.header__content .header__content-logo {
+  font-size: 2rem;
+}
+
 .header__content .header__content-right {
   display: flex;
+  font-size: 1.3rem;
 }
 
 .header__content .header__content-right nav ul {
@@ -164,9 +171,18 @@ header {
   flex-direction: row;
 }
 
+.header__content .header__content-right nav ul li {
+  margin-right: 24px;
+}
+
 .header__content .header__content-right .header__content-contacts {
   display: flex;
   flex-direction: row;
+}
+
+.header__content .header__content-right .header__content-contacts .header__content-contacts-item .header__content-contacts-item--icon {
+  height: 2rem;
+  margin-right: 12px;
 }
 
 header {
