@@ -1,0 +1,18 @@
+@import "../base/variable";
+@import "../base/mixin";
+
+.heading__second--section {
+  position: relative;
+  width: fit-content;
+  font-family: $font-selif;
+  font-size: 96px;
+  &::after {
+    position: absolute;
+    right: 12px;
+    top: 103px;
+    content: "";
+    display: block;
+    width: 100vw;
+    border-bottom: 3px solid $color-black;
+  }
+}

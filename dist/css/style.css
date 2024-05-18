@@ -54,6 +54,7 @@
 }
 
 * {
+  color: #222;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
 }
@@ -233,6 +234,25 @@ header {
   font-family: "Playfair Display", serif;
   font-size: 2rem;
   text-decoration: underline;
+}
+
+.heading__second--section {
+  font-family: "Playfair Display", serif;
+  font-size: 96px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.heading__second--section::after {
+  border-bottom: 3px solid #222;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 103px;
+  width: 100vw;
 }
 
 @media only screen and (min-width: 768px) {
