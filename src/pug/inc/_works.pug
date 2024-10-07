@@ -1,18 +1,21 @@
 h2.heading__second--section Works 
 .works__summary 
-  h3.works__summary-title Summary
-    ul.works__summary-list
-      li.works__summary-list-item.year 
-        .works__summary-list-item-content--vis 3years
-        .works__summary-list-item-content--title as a designer/developer
-      li.works__summary-list-item.ratio
-        .works__summary-list-item-content--vis 7:1
-        .works__summary-list-item-content--title Client Work : In-house
-      li.works__summary-list-item.industry 
-        .works__summary-list-item-content--vis pie chart
-        .works__summary-list-item-content--title Project Industries 
+  h3.heading__third.works__summary-title Summary
+  ul.works__summary-list
+    li.works__summary-list-item.year 
+      .works__summary-list-item-content--vis 
+        p 
+          span.highlight 3
+        |  years
+      .works__summary-list-item-content--title as a designer/developer
+    li.works__summary-list-item.ratio
+      .works__summary-list-item-content--vis 7:1
+      .works__summary-list-item-content--title Client Work : In-house
+    li.works__summary-list-item.industry 
+      .works__summary-list-item-content--vis pie chart
+      .works__summary-list-item-content--title Project Industries 
 .works__projects
-  h3 Projects
+  h3.heading__third Projects
     ul.works__projects-list
   -
     const list = [
