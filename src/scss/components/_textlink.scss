@@ -1,0 +1,9 @@
+@import "../base/variable";
+@import "../base/mixin";
+
+.text-link {
+  font-family: $font-selif;
+  font-size: 2rem;
+  color: $color-satmor-2;
+  text-decoration: underline;
+}
