@@ -204,10 +204,6 @@ header {
   margin-right: 12px;
 }
 
-header {
-  padding: 24px;
-}
-
 .footer__content {
   display: flex;
   flex-direction: row;
