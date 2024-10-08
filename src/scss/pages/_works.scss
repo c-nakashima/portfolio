@@ -1,0 +1,61 @@
+// @forward "../variable.scss";
+@import "../abstracts/variable";
+@import "../abstracts/mixin";
+
+.works__summary {
+  &-list {
+    @include flexRow;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.works__projects-list-item {
+  margin-bottom: 72px;
+  position: relative;
+  &-content {
+    &--bg {
+      width: 100%;
+    }
+    &--front {
+      position: absolute;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      padding: 80px;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+    &-textgroup {
+      margin: auto;
+      &--main {
+        font-family: $font-selif;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+      }
+      &--sub {
+        font-size: 1.2rem;
+        &text {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .works__projects-list-item {
+    &:not(:hover) {
+      .works__projects-list-item-content--front {
+        display: flex;
+      }
+    }
+    &:hover {
+      .works__projects-list-item-content--front {
+        display: flex;
+      }
+    }
+  }
+}

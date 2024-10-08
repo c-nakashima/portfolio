@@ -55,11 +55,12 @@ h2.heading__second--section Works
   each item in list
     li.works__projects-list-item
       img.works__projects-list-item-content--bg(src=`./img/section-full-${item.num}.png`)
-      .works__projects-list-item-content--front(style=`background-color: ${item.bgColor}; color: ${item.textColor}`)
-        h4=item.text
-        .subtexts
-          p.sub=item.pjdescription
-          p.sub=item.term
-      
+      .works__projects-list-item-content--front(style=`background-color: ${item.bgColor};`)
+        .works__projects-list-item-content-textgroup
+          h4.works__projects-list-item-content-textgroup--main(style=`color: ${item.textColor}`)=item.text
+          .works__projects-list-item-content-textgroup--sub
+            p.works__projects-list-item-content-textgroup--subtext(style=`color: ${item.textColor}`)=item.pjdescription
+            p.works__projects-list-item-content-textgroup--subtext(style=`color: ${item.textColor}`)=item.term
+        
 
   

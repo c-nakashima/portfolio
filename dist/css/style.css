@@ -68,97 +68,41 @@ ul {
   padding: 0;
 }
 
-main {
-  background-image: url(/img/portrait-1.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: flex;
-  flex-direction: row;
-  height: 1000px;
-  width: 100%;
+h4,
+p {
+  margin: 0;
 }
 
-.main__content {
-  height: auto;
-  margin-top: 180px;
-  width: 400px;
-}
-
-.main__content h1.main__content-text--title,
-.main__content .main__content-text--sub {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.main__content h1.main__content-text--title {
+.text-link {
+  color: #573a4c;
   font-family: "Playfair Display", serif;
-  font-size: 4rem;
-  font-weight: 400;
-  line-height: 128%;
-  margin-bottom: 32px;
-  width: 600px;
+  font-size: 2rem;
+  text-decoration: underline;
 }
 
-.main__content .main__content-text--sub {
-  font-size: 1.5rem;
-  line-height: 132%;
-  margin-bottom: 48px;
-  width: 500px;
-}
-
-.works__summary .works__summary-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.works__projects-list-item {
-  margin-bottom: 72px;
+.heading__second--section {
+  font-family: "Playfair Display", serif;
+  font-size: 96px;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.works__projects-list-item img.works__projects-list-item-content--bg {
-  width: 100%;
-}
-
-.works__projects-list-item .works__projects-list-item-content--front {
-  cursor: pointer;
-  height: 100%;
+.heading__second--section::after {
+  border-bottom: 3px solid #222;
+  content: "";
+  display: block;
   position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 100;
+  right: 12px;
+  top: 103px;
+  width: 100vw;
 }
 
-.skills__skillset .skills__skillset-list {
-  display: flex;
-  flex-direction: row;
-}
-
-.skills__skillset .skills__skillset-list .skills__skillset-list-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.skills__skillset .skills__skillset-list .skills__skillset-list-item .skills__skillset-icon-list {
-  display: flex;
-  flex-direction: row;
-}
-
-.skills__skillset .skills__skillset-list .skills__skillset-list-item .skills__skillset-icon-list .skills__skillset-icon {
-  height: 32px;
-  width: 32px;
-}
-
-.skills__skillset-list-item .skills__skillset-list-item-content--img {
-  height: 94px;
-  width: 94px;
-}
-
-.aboutme__overview .aboutme__overview-img {
-  width: 400px;
+.heading__third {
+  font-size: 2rem;
+  font-weight: 200;
+  margin: 0 0 3rem 0;
 }
 
 header {
@@ -225,36 +169,117 @@ header {
   flex-direction: row;
 }
 
-.text-link {
-  color: #573a4c;
-  font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  text-decoration: underline;
+main {
+  background-image: url(/img/portrait-1.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: row;
+  height: 1000px;
+  width: 100%;
 }
 
-.heading__second--section {
+.main__content {
+  height: auto;
+  margin-top: 180px;
+  width: 400px;
+}
+
+.main__content h1.main__content-text--title,
+.main__content .main__content-text--sub {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.main__content h1.main__content-text--title {
   font-family: "Playfair Display", serif;
-  font-size: 96px;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 128%;
+  margin-bottom: 32px;
+  width: 600px;
+}
+
+.main__content .main__content-text--sub {
+  font-size: 1.5rem;
+  line-height: 132%;
+  margin-bottom: 48px;
+  width: 500px;
+}
+
+.works__summary-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.works__projects-list-item {
+  margin-bottom: 72px;
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
-.heading__second--section::after {
-  border-bottom: 3px solid #222;
-  content: "";
-  display: block;
+.works__projects-list-item-content--bg {
+  width: 100%;
+}
+
+.works__projects-list-item-content--front {
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 100%;
+  padding: 80px;
   position: absolute;
-  right: 12px;
-  top: 103px;
-  width: 100vw;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
-.heading__third {
-  font-size: 2rem;
-  font-weight: 200;
-  margin: 0 0 3rem 0;
+.works__projects-list-item-content-textgroup {
+  margin: auto;
+}
+
+.works__projects-list-item-content-textgroup--main {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.works__projects-list-item-content-textgroup--sub {
+  font-size: 1.2rem;
+}
+
+.works__projects-list-item-content-textgroup--subtext {
+  margin-bottom: 0.5rem;
+}
+
+.skills__skillset .skills__skillset-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.skills__skillset .skills__skillset-list .skills__skillset-list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills__skillset .skills__skillset-list .skills__skillset-list-item .skills__skillset-icon-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.skills__skillset .skills__skillset-list .skills__skillset-list-item .skills__skillset-icon-list .skills__skillset-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.skills__skillset-list-item .skills__skillset-list-item-content--img {
+  height: 94px;
+  width: 94px;
+}
+
+.aboutme__overview .aboutme__overview-img {
+  width: 400px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -269,10 +294,10 @@ header {
 
 @media (hover: hover) {
   .works__projects-list-item:not(:hover) .works__projects-list-item-content--front {
-    display: none;
+    display: flex;
   }
 
   .works__projects-list-item:hover .works__projects-list-item-content--front {
-    display: block;
+    display: flex;
   }
 }/*# sourceMappingURL=sourcemaps/style.css.map */
