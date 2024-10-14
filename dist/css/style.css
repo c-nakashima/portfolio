@@ -253,6 +253,26 @@ main {
   margin-bottom: 0.5rem;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .skills__skillset .skills__skillset-list {
   display: flex;
   flex-direction: row;
@@ -294,10 +314,11 @@ main {
 
 @media (hover: hover) {
   .works__projects-list-item:not(:hover) .works__projects-list-item-content--front {
-    display: flex;
+    opacity: 0;
   }
 
   .works__projects-list-item:hover .works__projects-list-item-content--front {
-    display: flex;
+    -webkit-animation: fadeIn 0.2s ease-in-out;
+    animation: fadeIn 0.2s ease-in-out;
   }
 }/*# sourceMappingURL=sourcemaps/style.css.map */

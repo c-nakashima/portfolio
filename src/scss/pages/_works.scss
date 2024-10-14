@@ -45,16 +45,25 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (hover: hover) {
   .works__projects-list-item {
     &:not(:hover) {
       .works__projects-list-item-content--front {
-        display: flex;
+        opacity: 0;
       }
     }
     &:hover {
       .works__projects-list-item-content--front {
-        display: flex;
+        animation: fadeIn 0.2s ease-in-out;
       }
     }
   }
