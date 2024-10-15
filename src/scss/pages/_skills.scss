@@ -3,24 +3,55 @@
 
 //layout
 .skills__skillset {
+  margin-bottom: 4rem;
+  h3.skills__skillset-title {
+    @include sectionCopy;
+    margin-bottom: 3rem;
+  }
   .skills__skillset-list {
     @include flexRow;
+    padding: 2rem;
+    background-color: rgba(149, 104, 123, 0.04);
     .skills__skillset-list-item {
       @include flexCol;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      &-content--img {
+        width: 94px;
+        height: 94px;
+        margin-bottom: 1.5rem;
+      }
+      &-content--title {
+        font-size: $font-size-list-item-title;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        color: $color-satmor-2;
+      }
       .skills__skillset-icon-list {
         @include flexRow;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: fit-content;
         .skills__skillset-icon {
           width: 32px;
           height: 32px;
+          margin-right: 0.5rem;
         }
       }
     }
   }
 }
 
-.skills__skillset-list-item {
-  .skills__skillset-list-item-content--img {
-    width: 94px;
-    height: 94px;
+.skills__statement {
+  &-text {
+    max-width: $max-width-text-desktop;
+    &-paragraph {
+      margin-bottom: 1.5rem;
+      @include bodyTextReg;
+    }
+  }
+  h3.skills__statement-title {
+    @include sectionCopy;
   }
 }

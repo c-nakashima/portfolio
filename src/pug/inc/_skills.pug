@@ -1,38 +1,38 @@
 h2.heading__second--section What I do
 .skills__skillset 
   h3.skills__skillset-title Focusing on UI/UX Design,</br>handling Front End Development.
-    ul.skills__skillset-list
-      -
-        const skills = [
-          {
-            img: "star-lightbulb",
-            title: "Requirement Definition",
-            icons: [],
-          },
-          {
-            img: "magnifier-search-account",
-            title: "UX Research",
-            icons: ["icons8-figma","icons8-adobe-xd"],
-          },
-              {
-            img: "website",
-            title: "UI Design",
-            icons: ["icons8-figma","icons8-adobe-xd","icons8-illustrator-52"],
-          },
-          {
-            img: "programming",
-            title: "Front End Development",
-            icons: ["icons8-html-5","icons8-css3","icons8-sass","icons8-javascript","icons8-vuejs","icons8-vuetify"],
-          },
-        ]
-      each skill in skills
-        li.skills__skillset-list-item
-          img(src=`./img/${skill.img}.svg`).skills__skillset-list-item-content--img
-          .skills__skillset-list-item-content--title=skill.title
-          ul.skills__skillset-icon-list
-            each icon in skill.icons
-              li.skills__skillset-icon-list-item
-                img.skills__skillset-icon(src=`./img/${icon}.svg`)
+  ul.skills__skillset-list
+    -
+      const skills = [
+        {
+          img: "icon-lightbulb",
+          title: "Requirement Definition",
+          icons: [],
+        },
+        {
+          img: "icon-ux-research",
+          title: "UX Research",
+          icons: ["icons8-figma","icons8-adobe-xd"],
+        },
+        {
+          img: "icon-ui-design",
+          title: "UI Design",            
+          icons: ["icons8-figma","icons8-adobe-xd","icons8-illustrator-52"],
+        },
+        {
+          img: "icon-front-end",
+          title: "Front End Development",            
+          icons: ["icons8-html-5","icons8-css3","icons8-sass","icons8-javascript","icons8-vuejs","icons8-vuetify", "icons8-github"],
+        },
+      ]
+    each skill in skills
+      li.skills__skillset-list-item
+        img(src=`./img/${skill.img}.svg`).skills__skillset-list-item-content--img
+        .skills__skillset-list-item-content--title=skill.title
+        ul.skills__skillset-icon-list
+          each icon in skill.icons
+            li.skills__skillset-icon-list-item
+              img.skills__skillset-icon(src=`./img/${icon}.svg`)
 .skills__statement 
   h3.skills__statement-title Clarify the Problem,</br>Integrate the Team.
   .skills__statement-text 
