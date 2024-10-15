@@ -2,15 +2,6 @@
 @import "../abstracts/variable";
 @import "../abstracts/mixin";
 
-.works__summary {
-  &-list {
-    @include flexRow;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
 .works__projects-list-item {
   margin-bottom: 72px;
   position: relative;
