@@ -26,5 +26,14 @@
       margin-bottom: 1.5rem;
       @include bodyTextReg;
     }
+    &-links {
+      display: flex;
+      &-link {
+        margin-right: 2rem;
+        font-size: $font-size-link;
+        color: $color-satmor-2;
+        font-family: $font-selif;
+      }
+    }
   }
 }

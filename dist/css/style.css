@@ -371,6 +371,17 @@ main {
   opacity: 0.7;
 }
 
+.aboutme__overview-text-links {
+  display: flex;
+}
+
+.aboutme__overview-text-links-link {
+  color: #573a4c;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+
 @media only screen and (min-width: 768px) {
   .media-query-sample01 {
     font-size: 18px;
