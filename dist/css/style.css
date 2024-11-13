@@ -337,8 +337,38 @@ main {
   line-height: 132%;
 }
 
-.aboutme__overview .aboutme__overview-img {
+.aboutme__overview {
+  display: flex;
+}
+
+.aboutme__overview-img {
+  margin-right: 2rem;
   width: 400px;
+}
+
+.aboutme__overview-text {
+  max-width: 679px;
+  padding: 3rem;
+  position: relative;
+}
+
+.aboutme__overview-text::before {
+  background-image: url("../img/quatation.png");
+  background-size: cover;
+  content: "";
+  height: 81.5px;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100px;
+}
+
+.aboutme__overview-text-paragraph {
+  font-size: 1.5rem;
+  line-height: 132%;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
 }
 
 @media only screen and (min-width: 768px) {

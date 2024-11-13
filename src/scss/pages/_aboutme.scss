@@ -2,7 +2,29 @@
 @import "../abstracts/mixin";
 
 .aboutme__overview {
-  .aboutme__overview-img {
+  display: flex;
+  &-img {
+    margin-right: 2rem;
     width: 400px;
+  }
+  &-text {
+    position: relative;
+    padding: 3rem;
+    max-width: $max-width-text-desktop;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 81.5px;
+      background-image: url("../img/quatation.png");
+      background-size: cover;
+      opacity: 0.6;
+    }
+    &-paragraph {
+      margin-bottom: 1.5rem;
+      @include bodyTextReg;
+    }
   }
 }
