@@ -382,6 +382,12 @@ main {
   margin-right: 2rem;
 }
 
+h3.aboutme__timeline-title {
+  font-size: 2rem;
+  line-height: 132%;
+  margin-bottom: 3rem;
+}
+
 @media only screen and (min-width: 768px) {
   .media-query-sample01 {
     font-size: 18px;

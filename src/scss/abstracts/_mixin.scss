@@ -11,6 +11,10 @@
   font-size: $font-size-section-copy;
   line-height: $line-hight-section-copy;
 }
+@mixin blocTitle {
+  font-size: $font-size-bloc-title;
+  line-height: $line-hight-bloc-title;
+}
 @mixin bodyTextReg {
   font-size: $font-size-body-regular;
   line-height: 132%;

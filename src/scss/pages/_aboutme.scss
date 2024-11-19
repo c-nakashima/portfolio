@@ -37,3 +37,8 @@
     }
   }
 }
+
+h3.aboutme__timeline-title {
+  @include blocTitle;
+  margin-bottom: 3rem;
+}
