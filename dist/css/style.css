@@ -170,7 +170,6 @@ header {
 }
 
 main {
-  background-image: url(/img/portrait-1.png);
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -183,15 +182,16 @@ main {
 .main__content {
   height: auto;
   margin-top: 180px;
+  position: relative;
   width: 400px;
 }
 
-.main__content h1.main__content-text--title,
-.main__content .main__content-text--sub {
+.main__content-text h1.main__content-text--title,
+.main__content-text .main__content-text--sub {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.main__content h1.main__content-text--title {
+.main__content-text h1.main__content-text--title {
   font-family: "Playfair Display", serif;
   font-size: 4rem;
   font-weight: 400;
@@ -200,11 +200,21 @@ main {
   width: 600px;
 }
 
-.main__content .main__content-text--sub {
+.main__content-text .main__content-text--sub {
   font-size: 1.5rem;
   line-height: 132%;
   margin-bottom: 48px;
   width: 500px;
+}
+
+.main__content-img {
+  left: 300px;
+  opacity: 0.9;
+  position: absolute;
+  right: 0;
+  top: -180px;
+  width: 1000px;
+  z-index: -100;
 }
 
 .works__projects-list-item {

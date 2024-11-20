@@ -5,7 +5,7 @@ main {
   flex-direction: row;
   width: 100%;
   height: 1000px;
-  background-image: url(/img/portrait-1.png);
+  // background-image: url(/img/portrait-1.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -15,22 +15,34 @@ main {
   margin-top: 180px;
   width: 400px;
   height: auto;
-  h1.main__content-text--title,
-  .main__content-text--sub {
-    background-color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  &-text {
+    h1.main__content-text--title,
+    .main__content-text--sub {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    h1.main__content-text--title {
+      width: 600px;
+      margin-bottom: 32px;
+      font-family: $font-selif;
+      font-size: $font-size-main;
+      line-height: $line-hight-main;
+      font-weight: 400;
+    }
+    .main__content-text--sub {
+      margin-bottom: 48px;
+      width: 500px;
+      font-size: $font-size-sub-copy;
+      line-height: $line-hight-sub-copy;
+    }
   }
-  h1.main__content-text--title {
-    width: 600px;
-    margin-bottom: 32px;
-    font-family: $font-selif;
-    font-size: $font-size-main;
-    line-height: $line-hight-main;
-    font-weight: 400;
-  }
-  .main__content-text--sub {
-    margin-bottom: 48px;
-    width: 500px;
-    font-size: $font-size-sub-copy;
-    line-height: $line-hight-sub-copy;
+  &-img {
+    position: absolute;
+    top: -180px;
+    right: 0;
+    left: 300px;
+    width: 1000px;
+    z-index: -100;
+    opacity: 0.9;
   }
 }
