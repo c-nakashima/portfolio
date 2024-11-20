@@ -1,5 +1,5 @@
-h2.heading__second--section What I do
-.skills__skillset 
+h2.heading__second--section Skills
+.skills__skillset.container
   h3.skills__skillset-title Focusing on UI/UX Design,</br>handling Front End Development.
   ul.skills__skillset-list
     -
@@ -27,12 +27,12 @@ h2.heading__second--section What I do
       ]
     each skill in skills
       li.skills__skillset-list-item
-        img(src=`./img/${skill.img}.svg`).skills__skillset-list-item-content--img
-        .skills__skillset-list-item-content--title=skill.title
-        ul.skills__skillset-icon-list
+        img(src=`./img/${skill.img}.svg`).skills__skillset-list-item-img
+        .skills__skillset-list-item-title=skill.title
+        ul.skills__skillset-list-item-iconlist
           each icon in skill.icons
-            li.skills__skillset-icon-list-item
-              img.skills__skillset-icon(src=`./img/${icon}.svg`)
+            li.skills__skillset-list-item-iconlist
+              img.skills__skillset-list-item-iconlist-icon(src=`./img/${icon}.svg`)
 .skills__statement 
   h3.skills__statement-title Clarify the Problem,</br>Integrate the Team.
   .skills__statement-text 

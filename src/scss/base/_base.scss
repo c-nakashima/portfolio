@@ -1,3 +1,5 @@
+@import "../abstracts/variable";
+
 // アルファベット順に並ぶ
 .alphabetical {
   display: flex;
@@ -33,7 +35,7 @@
 
 .container {
   width: 100%;
+  max-width: $max-width-content-desktop;
   margin: 0 auto;
-  padding: 0 24px;
   max-width: 1200px;
 }

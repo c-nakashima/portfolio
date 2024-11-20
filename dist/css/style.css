@@ -48,8 +48,8 @@
 
 .container {
   margin: 0 auto;
+  max-width: 1144px;
   max-width: 1200px;
-  padding: 0 24px;
   width: 100%;
 }
 
@@ -106,7 +106,7 @@ p {
 }
 
 header {
-  padding: 24px;
+  padding: 24px 0;
 }
 
 .header__content {
@@ -115,7 +115,6 @@ header {
   font-family: "Playfair Display", serif;
   font-weight: light;
   justify-content: space-between;
-  width: 100%;
 }
 
 .header__content .header__content-logo {
@@ -149,24 +148,25 @@ header {
 }
 
 .footer__content {
+  border-top: 1px solid #222;
+  padding: 3rem 9rem 6rem 9rem;
+}
+
+.footer__content-text {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  max-width: 1144px;
   width: 100%;
 }
 
-.footer__content .right {
-  display: flex;
+.footer__content-text-item {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
 }
 
-.footer__content .right nav ul {
-  display: flex;
-  flex-direction: row;
-}
-
-.footer__content .right .contacts {
-  display: flex;
-  flex-direction: row;
+.footer__content-text-item--name {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
 }
 
 main {
@@ -180,7 +180,6 @@ main {
   height: auto;
   margin-top: 180px;
   position: relative;
-  width: 400px;
 }
 
 .main__content-text h1.main__content-text--title,
@@ -276,21 +275,21 @@ main {
   margin-bottom: 4rem;
 }
 
-.skills__skillset h3.skills__skillset-title {
+.skills__skillset-title {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   line-height: 132%;
   margin-bottom: 3rem;
 }
 
-.skills__skillset .skills__skillset-list {
+.skills__skillset-list {
   background-color: rgba(149, 104, 123, 0.04);
   display: flex;
   flex-direction: row;
   padding: 2rem;
 }
 
-.skills__skillset .skills__skillset-list .skills__skillset-list-item {
+.skills__skillset-list-item {
   align-items: center;
   display: flex;
   display: flex;
@@ -298,20 +297,20 @@ main {
   width: 100%;
 }
 
-.skills__skillset .skills__skillset-list .skills__skillset-list-item-content--img {
+.skills__skillset-list-item-img {
   height: 94px;
   margin-bottom: 1.5rem;
   width: 94px;
 }
 
-.skills__skillset .skills__skillset-list .skills__skillset-list-item-content--title {
+.skills__skillset-list-item-title {
   color: #573a4c;
   font-size: 1.25rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
-.skills__skillset .skills__skillset-list .skills__skillset-list-item .skills__skillset-icon-list {
+.skills__skillset-list-item-iconlist {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -321,7 +320,7 @@ main {
   max-width: fit-content;
 }
 
-.skills__skillset .skills__skillset-list .skills__skillset-list-item .skills__skillset-icon-list .skills__skillset-icon {
+.skills__skillset-list-item-iconlist-icon {
   height: 32px;
   margin-right: 0.5rem;
   width: 32px;
@@ -332,13 +331,13 @@ main {
 }
 
 .skills__statement-text-paragraph {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 132%;
   margin-bottom: 1.5rem;
   opacity: 0.7;
 }
 
-.skills__statement h3.skills__statement-title {
+.skills__statement-title {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   line-height: 132%;
@@ -372,7 +371,7 @@ main {
 }
 
 .aboutme__overview-text-paragraph {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 132%;
   margin-bottom: 1.5rem;
   opacity: 0.7;
@@ -396,6 +395,7 @@ h3.aboutme__timeline-title {
 }
 
 #timeline-container {
+  margin-bottom: 10rem;
   margin-left: 2rem;
   width: 80%;
 }
