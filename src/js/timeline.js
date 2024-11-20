@@ -1,53 +1,58 @@
 import * as d3 from "d3";
 
-// export const drawTimeline = (timelineData) => {
-//   // タイムラインのスケール設定
-//   const startDate = d3.min(timelineData, (d) => d.startDate);
-//   const endDate = d3.max(timelineData, (d) => d.endDate || new Date());
+export const drawTimeline = (timelineData) => {
+  const svg = d3
+    .select("#timeline-container")
+    .append("svg")
+    .attr("width", 600)
+    .attr("height", 800);
 
-//   // Y軸のスケール設定
-//   const yScale = d3.scaleTime().domain([startDate, endDate]).range([0, 500]); // タイムラインの高さに合わせて調整
+  const lineX = 10;
+  const dotRadius = 5;
 
-//   // タイムラインコンテナの取得
-//   const timeline = d3.select("#timeline");
+  // タイムラインの縦線
+  svg
+    .append("line")
+    .attr("x1", lineX)
+    .attr("y1", 50)
+    .attr("x2", lineX)
+    .attr("y2", 750)
+    .attr("class", "line");
 
-//   // 各イベントをタイムラインに追加
-//   timelineData.forEach((event) => {
-//     const eventContainer = timeline
-//       .append("div")
-//       .attr("class", "event")
-//       .style("position", "absolute")
-//       .style("top", `${yScale(event.startDate)}px`); // 開始日を基に位置を設定
+  // Creating each point
+  timelineData.forEach((d, i) => {
+    const yPosition = 100 + i * 130;
 
-//     // ドットの追加
-//     eventContainer
-//       .append("div")
-//       .attr("class", "dot")
-//       .style("width", "8px")
-//       .style("height", "8px")
-//       .style("background-color", "#888")
-//       .style("border-radius", "50%")
-//       .style("position", "absolute")
-//       .style("left", "-16px"); // タイムラインの左側に配置
+    // node
+    svg
+      .append("circle")
+      .attr("cx", lineX)
+      .attr("cy", yPosition)
+      .attr("r", dotRadius)
+      .attr("class", "dot");
 
-//     // ラベルの追加
-//     const label = eventContainer.append("div").attr("class", "label");
+    // company
+    svg
+      .append("text")
+      .attr("x", lineX + 20)
+      .attr("y", yPosition - 10)
+      .attr("class", "companyname")
+      .text(d.title);
 
-//     label.append("h3").text(event.company);
-//     label
-//       .append("p")
-//       .text(
-//         `${event.location} ${formatDate(event.startDate)} - ${
-//           event.endDate ? formatDate(event.endDate) : "Present"
-//         }`
-//       );
-//     label.append("p").text(event.role);
-//     label.append("p").text(event.details);
-//   });
+    // location, term, jobtype
+    svg
+      .append("text")
+      .attr("x", lineX + 20)
+      .attr("y", yPosition + 12)
+      .attr("class", "text")
+      .text(`${d.location} ${d.date}  ${d.type}`);
 
-//   // 日付をフォーマットする関数
-//   function formatDate(date) {
-//     const options = { year: "numeric", month: "short" };
-//     return date.toLocaleDateString("en-US", options);
-//   }
-// };
+    // title
+    svg
+      .append("text")
+      .attr("x", lineX + 20)
+      .attr("y", yPosition + 32)
+      .attr("class", "text")
+      .text(d.role);
+  });
+};

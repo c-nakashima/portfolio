@@ -1,85 +1,41 @@
 import { drawTimeline } from "./timeline";
 
-// データセット
 const timelineData = [
   {
-    type: "work",
-    company: "CafeSnap",
+    title: "CrowdChem\nCo.,\nLtd.",
     location: "Tokyo",
-    date: "Jul 2018",
-    role: "Web content writer\nSNS management",
+    date: "Aug\n2022\n-",
+    role: "UI/UX\nDesigner",
+    type: "Freelance",
   },
   {
-    type: "work",
-    company: "en Factory, Inc.",
+    title: "Fignny\nCo.,Ltd.",
     location: "Tokyo",
-    date: "Aug 2019 - Aug 2020",
-    role: "Web content writer\nSNS management",
+    date: "Sep\n2021\n-\nJun\n2023",
+    role: "UI/UX\nDesigner\n/\nFrontend\nDeveloper",
+    type: "Full-time",
   },
   {
-    type: "work",
-    company: "PENQE",
+    title: "PENQE",
     location: "Tokyo",
-    date: "Aug 2020 - Aug 2021",
-    role: "Designer\nFrontend developer",
+    date: "Aug\n2020\n-\nAug\n2021",
+    role: "Designer\n/\nFrontend developer",
+    type: "Full-time",
   },
   {
-    type: "work",
-    company: "Figmny",
+    title: "en\nFactory,\nInc.",
     location: "Tokyo",
-    date: "Sep 2021 - Jun 2023",
-    role: "UI/UX Designer\nFrontend developer",
+    date: "Aug\n2019\n-\nAug\n2020",
+    role: "Web\nWriter\n/\nEditor,\nSocial\nMedia\nManagement",
+    type: "Full-time",
   },
   {
-    type: "work",
-    company: "CrowdChem",
+    title: "CafeSnap",
     location: "Tokyo",
-    date: "Aug 2022",
-    role: "UI/UX designer",
+    date: "Jul\n2018\n-",
+    role: "Web\nContent\nWriter",
+    type: "Freelance",
   },
 ];
-
-// const timelineData = [
-//   {
-//     company: "CafeSnap",
-//     location: "Tokyo",
-//     startDate: new Date(2018, 6),
-//     endDate: null,
-//     role: "Web content writer",
-//     details: "SNS management",
-//   },
-//   {
-//     company: "en Factory, Inc.",
-//     location: "Tokyo",
-//     startDate: new Date(2019, 7),
-//     endDate: new Date(2020, 7),
-//     role: "Web content writer",
-//     details: "SNS management",
-//   },
-//   {
-//     company: "PENQE",
-//     location: "Tokyo",
-//     startDate: new Date(2020, 7),
-//     endDate: new Date(2021, 7),
-//     role: "Designer",
-//     details: "Frontend developer",
-//   },
-//   {
-//     company: "Fignny",
-//     location: "Tokyo",
-//     startDate: new Date(2021, 8),
-//     endDate: new Date(2023, 5),
-//     role: "UI/UX Designer",
-//     details: "Frontend developer",
-//   },
-//   {
-//     company: "CrowdChem",
-//     location: "Tokyo",
-//     startDate: new Date(2022, 7),
-//     endDate: null,
-//     role: "UI/UX Designer",
-//     details: "",
-//   },
-// ];
 
 drawTimeline(timelineData);

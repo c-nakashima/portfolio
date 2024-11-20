@@ -388,6 +388,30 @@ h3.aboutme__timeline-title {
   margin-bottom: 3rem;
 }
 
+#timeline-container {
+  margin-left: 2rem;
+  width: 80%;
+}
+
+#timeline-container .line {
+  stroke: #573a4c;
+  stroke-width: 1px;
+}
+
+#timeline-container .dot {
+  fill: #573a4c;
+}
+
+#timeline-container .text {
+  font-size: 0.9rem;
+  fill: #222;
+}
+
+#timeline-container .companyname {
+  font-family: "Playfair Display", serif;
+  fill: #573a4c;
+}
+
 @media only screen and (min-width: 768px) {
   .media-query-sample01 {
     font-size: 18px;

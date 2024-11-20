@@ -42,3 +42,23 @@ h3.aboutme__timeline-title {
   @include blocTitle;
   margin-bottom: 3rem;
 }
+
+#timeline-container {
+  width: 80%;
+  margin-left: 2rem;
+  .line {
+    stroke: $color-satmor-2;
+    stroke-width: 1px;
+  }
+  .dot {
+    fill: $color-satmor-2;
+  }
+  .text {
+    font-size: $font-size-timeline;
+    fill: $color-black;
+  }
+  .companyname {
+    font-family: $font-selif;
+    fill: $color-satmor-2;
+  }
+}
