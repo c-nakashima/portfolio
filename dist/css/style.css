@@ -170,9 +170,6 @@ header {
 }
 
 main {
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;
   display: flex;
   flex-direction: row;
   height: 1000px;
